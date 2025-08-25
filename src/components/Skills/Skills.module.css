@@ -27,6 +27,39 @@
   background-clip: text;
 }
 
+/* Dark mode: use blue gradient instead of orange */
+[data-theme="dark"] .title {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode: blue styling for Skills components */
+[data-theme="dark"] .skillCategory::before {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .skillCategory:hover {
+  border-color: #40E0D0;
+}
+
+[data-theme="dark"] .categoryTitle::after {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .skillBullet {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .skillItem:hover .skillBullet {
+  box-shadow: 0 0 0 2px #40E0D0, 0 0 15px #40E0D0;
+}
+
+[data-theme="dark"] .skillItem:hover {
+  background: rgba(64, 224, 208, 0.1);
+}
+
 .subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);

@@ -163,6 +163,7 @@ body {
   border: 1px solid var(--glass-border);
 }
 
+
 .gradient-text {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -194,5 +195,11 @@ html {
 /* Selection styles */
 ::selection {
   background-color: var(--primary);
+  color: white;
+}
+
+/* Dark mode: blue selection color */
+[data-theme="dark"] ::selection {
+  background-color: #40E0D0;
   color: white;
 }

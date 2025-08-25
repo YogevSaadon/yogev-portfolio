@@ -1,87 +1,152 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import ThemeToggle from '../common/ThemeToggle';
+import { useScrollAnimation } from '../../hooks/useAnimations';
+import { useResponsive } from '../../hooks/useResponsive';
+import { useKeyboardNavigation } from '../../hooks/useAccessibility';
 import styles from './Header.module.css';
 
 const Header = () => {
-  const [theme, setTheme] = useState('light');
   const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }, []);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+  
+  const { isMobile } = useResponsive();
+  const [headerRef] = useScrollAnimation({ animationClass: 'animate-fade-in' });
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Update active section based on scroll position
+      const sections = ['hero', 'skills', 'projects', 'education', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Call once to set initial state
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
+  // Close mobile menu when clicking outside or pressing Escape
+  useKeyboardNavigation({
+    onEscape: () => setIsMobileMenuOpen(false)
+  });
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
     }
   };
 
+  const navItems = [
+    { id: 'hero', label: 'Home' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'education', label: 'Education' },
+    { id: 'contact', label: 'Contact' }
+  ];
+
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header 
+      ref={headerRef}
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}
+      role="banner"
+    >
       <div className={styles.container}>
         <div className={styles.logo}>
           <span className={styles.name}>Yogev Saadon</span>
         </div>
         
-        <nav className={styles.nav}>
-          <button 
-            className={styles.navLink}
-            onClick={() => scrollToSection('about')}
-          >
-            About
-          </button>
-          <button 
-            className={styles.navLink}
-            onClick={() => scrollToSection('skills')}
-          >
-            Skills
-          </button>
-          <button 
-            className={styles.navLink}
-            onClick={() => scrollToSection('projects')}
-          >
-            Projects
-          </button>
-          <button 
-            className={styles.navLink}
-            onClick={() => scrollToSection('education')}
-          >
-            Education
-          </button>
-          <button 
-            className={styles.navLink}
-            onClick={() => scrollToSection('contact')}
-          >
-            Contact
-          </button>
+        {/* Desktop Navigation */}
+        <nav className={styles.nav} role="navigation" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
+              onClick={() => scrollToSection(item.id)}
+              aria-current={activeSection === item.id ? 'page' : undefined}
+            >
+              {item.label}
+            </button>
+          ))}
         </nav>
 
-        <button 
-          className={styles.themeToggle}
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-        </button>
+        {/* Theme Toggle & Mobile Menu */}
+        <div className={styles.headerActions}>
+          <ThemeToggle 
+            className={styles.themeToggle} 
+            showLabel={false} 
+          />
+          
+          {isMobile && (
+            <button
+              className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.active : ''}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMobile && (
+          <nav 
+            className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ''}`}
+            role="navigation" 
+            aria-label="Mobile navigation"
+          >
+            <div className={styles.mobileNavContent}>
+              {navItems.map((item, index) => (
+                <button
+                  key={item.id}
+                  className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.active : ''} stagger-${index + 1}`}
+                  onClick={() => scrollToSection(item.id)}
+                  aria-current={activeSection === item.id ? 'page' : undefined}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        {/* Mobile Menu Backdrop */}
+        {isMobile && isMobileMenuOpen && (
+          <div 
+            className={styles.mobileMenuBackdrop}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+        )}
       </div>
     </header>
   );

@@ -29,6 +29,15 @@
   align-items: center;
 }
 
+.logoButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
 .name {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -38,6 +47,35 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Light mode: keep orange gradient */
+[data-theme="light"] .name {
+  background: linear-gradient(135deg, #D2691E, #CD853F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode: use blue gradient instead of orange */
+[data-theme="dark"] .name {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode navigation fixes */
+[data-theme="dark"] .navLink {
+  color: #9CA3AF !important;
+}
+
+[data-theme="dark"] .navLink:hover {
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .navLink::after {
+  background: linear-gradient(135deg, #40E0D0, #0080FF) !important;
 }
 
 .nav {

@@ -28,6 +28,42 @@
   background-clip: text;
 }
 
+/* Dark mode: use blue gradient instead of orange */
+[data-theme="dark"] .title {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode: blue styling for Projects components */
+[data-theme="dark"] .indicator.active {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .learningItem::before {
+  color: #40E0D0;
+}
+
+[data-theme="dark"] .navButton:hover {
+  background: #40E0D0;
+  border-color: #40E0D0;
+}
+
+[data-theme="dark"] .projectImage:hover .imageOverlay {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .projectLink:hover {
+  background: #40E0D0;
+  border-color: #40E0D0;
+}
+
+[data-theme="dark"] .techTag:hover {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  border-color: #40E0D0;
+}
+
 .subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);

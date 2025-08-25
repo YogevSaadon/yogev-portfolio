@@ -28,6 +28,48 @@
   background-clip: text;
 }
 
+/* Dark mode: use blue gradient instead of orange */
+[data-theme="dark"] .title {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode: blue styling for Education components */
+[data-theme="dark"] .educationCard:hover {
+  border-color: #40E0D0;
+}
+
+[data-theme="dark"] .educationCard::before {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .timelineDot {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .period {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .institution {
+  color: #40E0D0;
+}
+
+[data-theme="dark"] .skillTag:hover {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  border-color: #40E0D0;
+}
+
+[data-theme="dark"] .timeline::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+[data-theme="dark"] .timeline::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0080FF, #40E0D0);
+}
+
 .subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);

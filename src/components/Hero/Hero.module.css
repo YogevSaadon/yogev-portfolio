@@ -5,6 +5,8 @@
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -32,6 +34,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .greeting {
@@ -54,6 +57,15 @@
   background-clip: text;
   opacity: 0;
   animation: slideInUp 0.8s ease 0.4s forwards;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode: use blue gradient instead of orange */
+[data-theme="dark"] .name {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
@@ -162,6 +174,26 @@
 
 .imageWrapper:hover .imageOverlay {
   opacity: 0.1;
+}
+
+/* Light mode: keep orange overlay */
+[data-theme="light"] .imageOverlay {
+  background: linear-gradient(135deg, #D2691E, #CD853F);
+}
+
+/* Dark mode: darker blue-grey overlay and image filter */
+[data-theme="dark"] .profileImage {
+  filter: brightness(0.7) contrast(1.1) sepia(0.2) hue-rotate(200deg) saturate(0.8);
+  transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .imageOverlay {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(55, 65, 81, 0.5));
+  opacity: 0.2;
+}
+
+[data-theme="dark"] .imageWrapper:hover .imageOverlay {
+  opacity: 0.4;
 }
 
 .floatingElement1,

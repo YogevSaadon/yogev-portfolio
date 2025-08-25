@@ -2,7 +2,7 @@ import styles from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section id="about" className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.textContent}>
@@ -25,7 +25,7 @@ const Hero = () => {
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
               <img 
-                src="https://i.pravatar.cc/400?img=12" 
+                src="/src/assets/profile 2.jpg" 
                 alt="Yogev Saadon - Full Stack Developer"
                 className={styles.profileImage}
                 width="400"

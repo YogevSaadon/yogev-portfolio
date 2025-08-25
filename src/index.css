@@ -13,15 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Light Theme Colors */
-  --primary-light: #2DD4BF;
-  --secondary-light: #3B82F6;
-  --accent-light: #06B6D4;
-  --background-light: #FAFAFA;
-  --surface-light: #FFFFFF;
-  --text-light: #1F2937;
-  --text-secondary-light: #6B7280;
-  --border-light: rgba(59, 130, 246, 0.1);
-  --primary-rgb-light: 45, 212, 191;
+  --primary-light: #D2691E;
+  --secondary-light: #CD853F;
+  --accent-light: #DEB887;
+  --background-light: #FDF6E3;
+  --surface-light: #FFFEF7;
+  --text-light: #3E2723;
+  --text-secondary-light: #6D4C41;
+  --border-light: rgba(210, 105, 30, 0.1);
+  --primary-rgb-light: 210, 105, 30;
 
   /* Dark Theme Colors */
   --primary-dark: #D97706;

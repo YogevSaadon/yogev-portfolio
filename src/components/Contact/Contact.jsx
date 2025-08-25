@@ -14,10 +14,6 @@ const Contact = () => {
             </p>
             
             <div className={styles.contactDetails}>
-              <a href="mailto:yogev.saadon@email.com" className={styles.contactItem}>
-                <Mail size={20} />
-                <span>yogev.saadon@email.com</span>
-              </a>
               <div className={styles.contactItem}>
                 <span className={styles.icon}>📍</span>
                 <span>San Francisco, CA</span>

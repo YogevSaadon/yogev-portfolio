@@ -20,12 +20,6 @@ const Hero = () => {
               Computer Science degree while working on exciting projects 
               that solve real-world problems.
             </p>
-            <div className={styles.skills}>
-              <span className={styles.skill}>React</span>
-              <span className={styles.skill}>TypeScript</span>
-              <span className={styles.skill}>Node.js</span>
-              <span className={styles.skill}>Python</span>
-            </div>
           </div>
           
           <div className={styles.imageContainer}>

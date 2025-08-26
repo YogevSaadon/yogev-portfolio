@@ -105,6 +105,7 @@
   border-color: var(--primary);
 }
 
+
 .skillCategory:hover::before {
   transform: scaleX(1);
 }
@@ -169,6 +170,7 @@
   transform: scale(1.5);
   box-shadow: 0 0 0 2px var(--primary), 0 0 15px var(--primary);
 }
+
 
 /* Animation on scroll */
 .skillCategory {

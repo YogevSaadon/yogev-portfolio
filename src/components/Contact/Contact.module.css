@@ -68,6 +68,11 @@
   transform: translateX(8px);
 }
 
+/* Dark mode: blue hover for contact items */
+[data-theme="dark"] .contactItem:hover {
+  color: var(--color-blue);
+}
+
 .icon {
   font-size: 1.25rem;
   width: 20px;
@@ -127,6 +132,15 @@
   transform: translateY(-50%);
 }
 
+/* Dark mode: blue hovers for links */
+[data-theme="dark"] .link:hover {
+  color: var(--color-blue);
+}
+
+[data-theme="dark"] .link::before {
+  background: var(--color-blue);
+}
+
 .link:hover::before {
   width: 12px;
 }
@@ -160,6 +174,12 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Dark mode: blue hovers for Contact section */
+[data-theme="dark"] .socialLink:hover {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-light));
+  border-color: var(--color-blue);
+}
+
 .availability {
   font-size: 0.875rem;
   color: var(--text-secondary);
@@ -169,6 +189,11 @@
   background: var(--glass-bg);
   border-radius: var(--radius-sm);
   border-left: 3px solid var(--primary);
+}
+
+/* Dark mode: blue border for availability */
+[data-theme="dark"] .availability {
+  border-left-color: var(--color-blue);
 }
 
 .footer {

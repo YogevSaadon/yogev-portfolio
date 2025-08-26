@@ -20,6 +20,7 @@
   /* Legacy Variable Aliases (for existing components) */
   --primary: var(--color-orange);
   --secondary: var(--color-orange-light);
+  --accent: var(--color-orange-light);
   --text: var(--text-primary);
   --background: var(--bg-primary);
   --surface: var(--bg-surface);
@@ -76,6 +77,7 @@
   /* Legacy Variable Aliases (for existing components) */
   --primary: var(--color-orange);
   --secondary: var(--color-orange-light);
+  --accent: var(--color-orange-light);
   --text: var(--text-primary);
   --background: var(--bg-primary);
   --surface: var(--bg-surface);

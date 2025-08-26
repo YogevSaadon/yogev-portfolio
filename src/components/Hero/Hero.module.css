@@ -205,6 +205,11 @@
   animation: float 6s ease-in-out infinite;
 }
 
+[data-theme="dark"] .floatingElement1,
+[data-theme="dark"] .floatingElement2 {
+  background: linear-gradient(135deg, #40E0D0, #6B7280);
+}
+
 .floatingElement1 {
   width: 100px;
   height: 100px;
@@ -236,6 +241,12 @@
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   opacity: 0.03;
   animation: float 8s ease-in-out infinite;
+}
+
+[data-theme="dark"] .bgShape1,
+[data-theme="dark"] .bgShape2,
+[data-theme="dark"] .bgShape3 {
+  background: linear-gradient(135deg, #40E0D0, #6B7280);
 }
 
 .bgShape1 {

@@ -151,6 +151,12 @@
   box-shadow: var(--shadow-xl);
   opacity: 0;
   animation: scaleIn 1s ease 0.5s forwards;
+  
+  /* Prevent context menu and selection on container */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .profileImage {
@@ -158,6 +164,23 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  
+  /* Make image non-selectable/markable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* Prevent dragging */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  /* Additional protection */
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .imageWrapper:hover .profileImage {

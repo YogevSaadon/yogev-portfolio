@@ -30,6 +30,9 @@ const Hero = () => {
                 className={styles.profileImage}
                 width="400"
                 height="400"
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                draggable={false}
               />
               <div className={styles.imageOverlay}></div>
             </div>

@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 
 const SEOHead = ({
   title = 'Yogev - Full Stack Developer Portfolio',
@@ -69,7 +68,7 @@ const SEOHead = ({
   };
 
   return (
-    <Helmet>
+    <>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -161,7 +160,7 @@ const SEOHead = ({
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    </Helmet>
+    </>
   );
 };
 

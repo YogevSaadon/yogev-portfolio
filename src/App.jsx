@@ -1,5 +1,4 @@
 import { Suspense, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import Layout from './components/layout/Layout';
 import SEOHead from './components/common/SEOHead';
@@ -32,63 +31,61 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
-      <ThemeProvider>
-        <ErrorBoundary>
-          <div className="App" data-theme="system">
-            <SEOHead {...pageConfigs.home} />
-            
-            <Layout>
-              <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
-                  <LoadingSpinner size="large" text="Loading portfolio..." />
-                </div>
-              }>
-                <LazyHero />
-              </Suspense>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <div className="App" data-theme="system">
+          <SEOHead {...pageConfigs.home} />
+          
+          <Layout>
+            <Suspense fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                <LoadingSpinner size="large" text="Loading portfolio..." />
+              </div>
+            }>
+              <LazyHero />
+            </Suspense>
 
-              <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                  <LoadingSpinner text="Loading skills..." />
-                </div>
-              }>
-                <LazySkills />
-              </Suspense>
+            <Suspense fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+                <LoadingSpinner text="Loading skills..." />
+              </div>
+            }>
+              <LazySkills />
+            </Suspense>
 
-              <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                  <LoadingSpinner text="Loading projects..." />
-                </div>
-              }>
-                <LazyProjects />
-              </Suspense>
+            <Suspense fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+                <LoadingSpinner text="Loading projects..." />
+              </div>
+            }>
+              <LazyProjects />
+            </Suspense>
 
-              <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                  <LoadingSpinner text="Loading education..." />
-                </div>
-              }>
-                <LazyEducation />
-              </Suspense>
+            <Suspense fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+                <LoadingSpinner text="Loading education..." />
+              </div>
+            }>
+              <LazyEducation />
+            </Suspense>
 
-              <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                  <LoadingSpinner text="Loading contact form..." />
-                </div>
-              }>
-                <LazyContact />
-              </Suspense>
-            </Layout>
+            <Suspense fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+                <LoadingSpinner text="Loading contact form..." />
+              </div>
+            }>
+              <LazyContact />
+            </Suspense>
+          </Layout>
 
-            <NetworkStatus 
-              showConnectionInfo={process.env.NODE_ENV === 'development'}
-              position="top"
-              autoHide={true}
-            />
-          </div>
-        </ErrorBoundary>
-      </ThemeProvider>
-    </HelmetProvider>
+          <NetworkStatus 
+            showConnectionInfo={process.env.NODE_ENV === 'development'}
+            position="top"
+            autoHide={true}
+          />
+        </div>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 

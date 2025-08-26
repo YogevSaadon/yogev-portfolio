@@ -23,7 +23,7 @@ A modern, responsive portfolio website built with React and Vite.
 - React 19 + Vite 6.2.0
 - Modern CSS with CSS Modules + CSS Variables
 - Lucide React for icons
-- React Helmet Async for SEO
+- React 19 native head management for SEO
 - Performance monitoring and lazy loading
 
 **Directory Structure:**

@@ -10,7 +10,7 @@ This is a professional React portfolio website built with Vite, featuring modern
 - **Vite** - Fast build tool and dev server
 - **CSS Modules** - Scoped styling
 - **Lucide React** - Icon library
-- **React Helmet Async** - SEO meta tags management
+- **React 19 Native Head Management** - SEO meta tags and document head
 
 ## Project Structure
 ```
@@ -158,6 +158,38 @@ function AnimatedComponent() {
 - Set up analytics and monitoring
 
 This project follows modern React and web development best practices for a professional portfolio website.
+
+## CSS Architecture Issues & Solutions
+
+### Multiple CSS Systems Problem
+The codebase has evolved over time resulting in multiple overlapping CSS systems:
+
+1. **`themes.css`** - Contains theme variables but many are overridden
+2. **`variables.css`** - Contains the ACTUAL controlling variables
+3. **Component CSS** - Individual component styles with various overrides
+
+### Key Learnings
+- **Selection colors**: Controlled by `--color-blue` in `variables.css`, NOT the `::selection` rules in `themes.css`
+- **Background colors**: Controlled by `--color-dark-bg` in `variables.css`, NOT the `--color-bg-primary` in `themes.css`
+- **CSS specificity battles**: `base.css` uses `!important` which overrides theme-specific rules
+
+### Working Pattern
+When CSS changes don't work:
+1. Check `variables.css` first for the root color variables
+2. Look for `!important` rules that might be overriding
+3. Search for multiple definitions of the same property
+
+### Cleanup Recommendations
+- Remove redundant selection color rules from `themes.css`
+- Consolidate color definitions to single source of truth
+- Remove unused CSS rules (when safe to do so)
+- Document which files control which aspects of styling
+
+### Current Color Sources
+- Primary colors: `variables.css` (`--color-blue`, `--color-orange`, etc.)
+- Background: `variables.css` (`--color-dark-bg`)
+- Selection: `variables.css` (`--color-blue` → `--selection-bg`)
+- Text: Mix of `themes.css` and `variables.css`
 
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.

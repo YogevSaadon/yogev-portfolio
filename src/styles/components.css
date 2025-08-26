@@ -1,0 +1,213 @@
+/* Component-Specific Styles */
+
+/* Profile Image Container */
+.profile-image-container {
+  background-color: var(--bg-surface);
+  border: 3px solid var(--profile-border);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  will-change: border-color, background-color;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--bg-surface);
+  transition: background-color 0.3s ease;
+}
+
+/* Bubble Shapes */
+.bubble-shape {
+  background: linear-gradient(
+    135deg, 
+    var(--bubble-gradient-start), 
+    var(--bubble-gradient-end)
+  );
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.1;
+  animation: float 20s infinite ease-in-out;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+.bubble-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  right: 10%;
+  animation-delay: -1s;
+}
+
+.bubble-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: -3s;
+}
+
+.bubble-3 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 30%;
+  animation-delay: -5s;
+}
+
+.bubble-floating-1 {
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  right: -20px;
+  animation-delay: -2s;
+  opacity: 0.15;
+}
+
+.bubble-floating-2 {
+  width: 60px;
+  height: 60px;
+  bottom: -10px;
+  left: -10px;
+  animation-delay: -4s;
+  opacity: 0.15;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Lines and Dividers */
+.footer-divider,
+.trademark-border {
+  border-color: var(--line-color);
+  transition: border-color 0.3s ease;
+}
+
+/* Cards */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Buttons */
+.button {
+  background-color: var(--accent-primary);
+  color: white;
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+}
+
+.button--secondary:hover {
+  background-color: var(--glass-bg);
+  border-color: var(--accent-secondary);
+}
+
+/* Links */
+.link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--accent-secondary);
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-secondary);
+  transition: width 0.3s ease;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+/* Social Links */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+}
+
+.social-link:hover {
+  color: white;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-color: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--accent-secondary);
+}
+
+.theme-toggle:hover {
+  background: var(--accent-secondary);
+  color: white;
+  transform: scale(1.1);
+}

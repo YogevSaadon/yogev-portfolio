@@ -9,8 +9,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import { LazyHero, LazySkills, LazyProjects, LazyEducation, LazyContact, preloadCriticalComponents } from './utils/lazyComponents.jsx';
 import { pageConfigs } from './utils/seo';
 import performanceMonitor from './utils/performance';
-import './App.css';
-// import './styles/themes.css'; // Conflicts with index.css theme variables
+import './styles/variables.css';
+import './styles/base.css';
+import './styles/components.css';
 import './styles/responsive.css';
 import './styles/accessibility.css';
 import './styles/animations.css';

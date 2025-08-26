@@ -1,7 +1,8 @@
+/* Legacy App.css - styles moved to new CSS architecture */
 .App {
   min-height: 100vh;
-  background: var(--background);
-  color: var(--text);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 

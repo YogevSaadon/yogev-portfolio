@@ -1,0 +1,76 @@
+:root {
+  /* Core Design Tokens */
+  --color-orange: #D97706;
+  --color-orange-light: #F59E0B;
+  --color-blue: #40E0D0;
+  --color-blue-light: #0080FF;
+  --color-dark-bg: #111827;
+  --color-light-bg: #FDF6E3;
+  --color-dark-surface: #1F2937;
+  --color-light-surface: #FFFEF7;
+  
+  /* Semantic Tokens - Light Mode */
+  --bg-primary: var(--color-light-bg);
+  --bg-surface: var(--color-light-surface);
+  --text-primary: #3E2723;
+  --text-secondary: #6D4C41;
+  --accent-primary: var(--color-orange);
+  --accent-secondary: var(--color-blue);
+  
+  /* Component-Specific Tokens */
+  --bubble-gradient-start: var(--color-orange);
+  --bubble-gradient-end: var(--color-orange-light);
+  --profile-border: var(--color-orange);
+  --selection-bg: rgba(210, 105, 30, 0.3);
+  --line-color: var(--color-orange);
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-backdrop: blur(10px);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Semantic Tokens */
+  --bg-primary: var(--color-dark-bg);
+  --bg-surface: var(--color-dark-surface);
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --accent-primary: var(--color-orange);
+  --accent-secondary: var(--color-blue);
+  
+  /* Dark Mode Component-Specific */
+  --bubble-gradient-start: var(--color-blue);
+  --bubble-gradient-end: var(--color-blue-light);
+  --profile-border: var(--color-blue);
+  --selection-bg: var(--color-blue);
+  --line-color: var(--color-blue);
+  
+  /* Dark Mode Glassmorphism */
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}

@@ -200,14 +200,10 @@
 .floatingElement2 {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--bubble-gradient-start), var(--bubble-gradient-end));
   opacity: 0.1;
   animation: float 6s ease-in-out infinite;
-}
-
-[data-theme="dark"] .floatingElement1,
-[data-theme="dark"] .floatingElement2 {
-  background: linear-gradient(135deg, #40E0D0, #6B7280);
+  transition: background 0.3s ease;
 }
 
 .floatingElement1 {
@@ -238,15 +234,10 @@
 .bgShape3 {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--bubble-gradient-start), var(--bubble-gradient-end));
   opacity: 0.03;
   animation: float 8s ease-in-out infinite;
-}
-
-[data-theme="dark"] .bgShape1,
-[data-theme="dark"] .bgShape2,
-[data-theme="dark"] .bgShape3 {
-  background: linear-gradient(135deg, #40E0D0, #6B7280);
+  transition: background 0.3s ease;
 }
 
 .bgShape1 {

@@ -28,52 +28,14 @@
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
-  color: var(--text);
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: background 0.3s ease;
 }
 
-/* Dark mode: use blue gradient instead of orange */
-[data-theme="dark"] .title {
-  background: linear-gradient(135deg, #40E0D0, #0080FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Dark mode: blue styling for Contact components */
-[data-theme="dark"] .contactItem:hover {
-  color: #40E0D0;
-}
-
-[data-theme="dark"] .link:hover {
-  color: #40E0D0;
-}
-
-[data-theme="dark"] .link::before {
-  background: #40E0D0;
-}
-
-[data-theme="dark"] .socialLink:hover {
-  background: linear-gradient(135deg, #40E0D0, #0080FF);
-  border-color: #40E0D0;
-}
-
-[data-theme="dark"] .availability {
-  border-left-color: #40E0D0;
-}
-
-[data-theme="dark"] .bgShape1,
-[data-theme="dark"] .bgShape2 {
-  background: linear-gradient(135deg, #40E0D0, #0080FF);
-}
-
-/* Dark mode: blue border for footer line */
-[data-theme="dark"] .footer {
-  border-top-color: #40E0D0;
-}
 
 .description {
   font-size: 1.125rem;
@@ -211,8 +173,9 @@
 
 .footer {
   padding-top: var(--spacing-xl);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line-color);
   text-align: center;
+  transition: border-color 0.3s ease;
 }
 
 .copyright {
@@ -232,9 +195,10 @@
 .bgShape2 {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--bubble-gradient-start), var(--bubble-gradient-end));
   opacity: 0.02;
   animation: float 10s ease-in-out infinite;
+  transition: background 0.3s ease;
 }
 
 .bgShape1 {

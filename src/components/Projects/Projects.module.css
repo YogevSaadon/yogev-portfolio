@@ -51,7 +51,7 @@
 }
 
 [data-theme="dark"] .projectImage:hover .imageOverlay {
-  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  background: linear-gradient(135deg, #40E0D0, #0080FF) !important;
 }
 
 [data-theme="dark"] .projectLink:hover {

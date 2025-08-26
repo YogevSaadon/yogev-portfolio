@@ -3,42 +3,29 @@ import styles from './Skills.module.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Core Technical Skills",
+      title: "Programming & Development",
       skills: [
-        "JavaScript (ES6+)",
-        "TypeScript",
-        "React.js",
-        "Node.js",
-        "Python",
         "Java",
-        "HTML5 & CSS3",
-        "SQL & NoSQL Databases"
+        "C#",
+        "Python",
+        "Node.js",
+        "React",
+        "GDScript",
+        "Godot (game engine/framework)"
       ]
     },
     {
-      title: "DevOps & Infrastructure",
+      title: "Cloud, DevOps & Infrastructure",
       skills: [
-        "AWS Cloud Services",
-        "Docker & Containerization",
-        "CI/CD Pipelines",
-        "Git Version Control",
-        "Linux/Unix Systems",
-        "Nginx & Apache",
-        "Database Management",
-        "API Design & Development"
+        "CI/CD"
       ]
     },
     {
-      title: "Development Tools",
+      title: "Databases, Tools & Monitoring",
       skills: [
-        "VS Code",
-        "IntelliJ IDEA",
-        "Postman",
-        "MongoDB Compass",
-        "GitHub/GitLab",
-        "Figma",
-        "Slack & Teams",
-        "Agile Methodologies"
+        "Git",
+        "GitHub",
+        "VS Code"
       ]
     }
   ];

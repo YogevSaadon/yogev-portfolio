@@ -15,8 +15,7 @@ const Contact = () => {
             
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
-                <span className={styles.icon}>📍</span>
-                <span>San Francisco, CA</span>
+                <span>Israel, Northern District</span>
               </div>
             </div>
           </div>
@@ -36,7 +35,7 @@ const Contact = () => {
               <h3 className={styles.sectionTitle}>Connect</h3>
               <div className={styles.socialLinks}>
                 <a 
-                  href="https://github.com/yogev-saadon" 
+                  href="https://github.com/yogevsaadon" 
                   className={styles.socialLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -56,7 +55,7 @@ const Contact = () => {
                   <span>LinkedIn</span>
                 </a>
                 <a 
-                  href="mailto:yogev.saadon@email.com" 
+                  href="mailto:yogev1234@gmail.com" 
                   className={styles.socialLink}
                   aria-label="Send Email"
                 >
@@ -73,7 +72,7 @@ const Contact = () => {
 
         <div className={styles.footer}>
           <p className={styles.copyright}>
-            © 2024 Yogev Saadon. All rights reserved. Built with React and Tailwind CSS.
+            © 2025 Yogev Saddon. Built with Kombai and React.
           </p>
         </div>
       </div>

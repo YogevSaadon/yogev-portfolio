@@ -11,14 +11,10 @@ const Hero = () => {
               <span className={styles.name}>Yogev Saadon</span>
             </h1>
             <p className={styles.subtitle}>
-              Computer Science Student | Full Stack Developer
+              Software Engineer | Computer Science
             </p>
             <p className={styles.description}>
-              Passionate about creating innovative solutions through code. I 
-              specialize in building modern web applications using React, 
-              Node.js, and cloud technologies. Currently pursuing my 
-              Computer Science degree while working on exciting projects 
-              that solve real-world problems.
+              Developer and creator with a strong foundation in data structures, algorithms, and problem-solving. Skilled in Python and scripting languages, I enjoy designing and building projects that combine analytical thinking with creativity—from interactive applications to systems driven by math and logic. Passionate about generative AI and deep learning, I'm motivated by the challenge of transforming complex ideas into impactful, real-world solutions.
             </p>
           </div>
           

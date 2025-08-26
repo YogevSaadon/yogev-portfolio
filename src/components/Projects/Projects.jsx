@@ -1,51 +1,38 @@
 import { useState } from 'react';
 import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
+import p1pic from '../../assets/p1pic.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
 
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Built with modern technologies for optimal performance and user experience.",
-      image: "https://images.unsplash.com/photo-1584713503693-bb386ec95cf2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwc2hvcHBpbmclMjBpbnRlcmZhY2V8ZW58MHwwfHxibHVlfDE3NTYwODMwODJ8MA&ixlib=rb-4.1.0&q=85",
-      imageAlt: "Modern e-commerce website interface, shopping cart, product grid, clean design - Obi on Unsplash",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      githubUrl: "https://github.com/yogev-saadon/ecommerce-platform",
-      demoUrl: "https://ecommerce-demo.yogevsaadon.com",
+      title: "Void Gambit",
+      description: "Real-time bullet-heaven focused on clean architecture and practical performance.",
+      image: p1pic,
+      imageAlt: "Void Gambit game screenshot showing bullet-hell gameplay",
+      technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design", "Performance Under Constraints"],
+      githubUrl: "https://github.com/YogevSaadon/void-gambit",
+      demoUrl: "https://yogevsaadon.github.io/void-gambit/",
       learnings: [
-        "Implemented secure payment processing with Stripe API",
-        "Optimized database queries for better performance",
-        "Built responsive design with mobile-first approach"
+        "Implemented math-driven targeting systems without physics",
+        "Optimized performance with staggered updates and cached queries",
+        "Designed zone-based AI with hysteresis for smooth gameplay"
       ]
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Perfect for agile development teams.",
-      image: "https://images.unsplash.com/photo-1599591520558-e36abcf58492?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw4fHxkYXNoYm9hcmQlMjB0YXNrJTIwbWFuYWdlbWVudCUyMGludGVyZmFjZXxlbnwwfDB8fGdyZWVufDE3NTYwODMwODJ8MA&ixlib=rb-4.1.0&q=85",
-      imageAlt: "Task management dashboard interface, kanban board, productivity app design - THLT LCX on Unsplash",
-      technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
-      githubUrl: "https://github.com/yogev-saadon/task-manager",
-      demoUrl: "https://tasks.yogevsaadon.com",
+      title: "Portfolio Website",
+      description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
+      image: "/logo.png",
+      imageAlt: "Yogev Saadon portfolio website logo",
+      technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
+      githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",
+      demoUrl: "https://yogevsaadon.github.io/yogev-portfolio/",
       learnings: [
-        "Integrated real-time communication with WebSockets",
-        "Implemented drag-and-drop with React DnD",
-        "Designed scalable component architecture"
-      ]
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for business intelligence with interactive charts, data visualization, and customizable reports. Helps businesses make data-driven decisions.",
-      image: "https://images.unsplash.com/photo-1486927181919-3ac1fc3a8082?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmQlMjBjaGFydHMlMjBkYXRhfGVufDB8MHx8cHVycGxlfDE3NTYwODMwODF8MA&ixlib=rb-4.1.0&q=85",
-      imageAlt: "Analytics dashboard with charts, graphs, data visualization, modern UI - Luca Bravo on Unsplash",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Redis"],
-      githubUrl: "https://github.com/yogev-saadon/analytics-dashboard",
-      demoUrl: "https://analytics.yogevsaadon.com",
-      learnings: [
-        "Created interactive data visualizations with D3.js",
-        "Implemented efficient data caching with Redis",
-        "Built RESTful APIs with FastAPI and Python"
+        "Leveraged AI tools for rapid development",
+        "Implemented automated deployment with GitHub Actions",
+        "Built responsive design with modern React patterns"
       ]
     }
   ];
@@ -133,16 +120,6 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className={styles.learnings}>
-                <h4 className={styles.learningsTitle}>Key Learnings</h4>
-                <ul className={styles.learningsList}>
-                  {projects[currentProject].learnings.map((learning, index) => (
-                    <li key={index} className={styles.learningItem}>
-                      {learning}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
 

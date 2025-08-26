@@ -5,23 +5,16 @@ const Education = () => {
     {
       period: "2022 - 2026",
       degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      description: "Pursuing a comprehensive degree in Computer Science with focus on software engineering, algorithms, and data structures. Maintaining a 3.8 GPA while actively participating in coding competitions and hackathons.",
-      skills: ["Data Structures & Algorithms", "Software Engineering", "Database Systems", "Machine Learning"]
+      institution: "The Open University of Israel",
+      description: "Pursuing a comprehensive degree in Computer Science with focus on software engineering, algorithms, and data structures.",
+      skills: ["Data Structures & Algorithms", "Software Engineering"]
     },
     {
-      period: "2023",
-      degree: "Full Stack Web Development Bootcamp",
-      institution: "TechAcademy Online",
-      description: "Intensive 6-month program covering modern web development technologies. Completed multiple real-world projects and collaborated with industry professionals on live projects.",
-      skills: ["React", "Node.js", "MongoDB", "Git/GitHub", "Agile Methodology"]
-    },
-    {
-      period: "2024",
-      degree: "AWS Cloud Practitioner Certification",
-      institution: "Amazon Web Services",
-      description: "Earned AWS Cloud Practitioner certification demonstrating foundational knowledge of cloud computing concepts, AWS services, and best practices for cloud architecture.",
-      skills: ["Cloud Computing", "AWS Services", "Security", "Pricing Models"]
+      period: "2014 - 2018",
+      degree: "Bachelor of Science in Mechanical Engineering",
+      institution: "Tel Aviv University",
+      description: "Solid foundation in advanced mathematics, systematic problem-solving and complex systems.",
+      skills: ["Python", "Linear Algebra", "Calculus", "Numerical Analysis"]
     }
   ];
 

@@ -11,9 +11,16 @@
       "Bash(npm install:*)",
       "Bash(npm run lint)",
       "Bash(cat:*)",
-      "Bash(md5sum:*)"
+      "Bash(md5sum:*)",
+      "Bash(git config:*)",
+      "Bash(git log:*)",
+      "WebSearch",
+      "WebSearch"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "C:\\Users\\PC\\.claude"
+    ]
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 // Hook for detecting network status
 export const useNetworkStatus = () => {
@@ -113,7 +113,7 @@ export const useOfflineQueue = () => {
     setQueue(prevQueue => [...prevQueue, queueItem]);
   };
 
-  const processQueue = async () => {
+  const processQueue = useCallback(async () => {
     if (!isOnline || queue.length === 0) return;
 
     const processedItems = [];
@@ -143,14 +143,14 @@ export const useOfflineQueue = () => {
         item.retryCount < item.maxRetries
       )
     );
-  };
+  }, [isOnline, queue, setQueue]);
 
   // Process queue when coming back online
   useEffect(() => {
     if (isOnline) {
       processQueue();
     }
-  }, [isOnline]);
+  }, [isOnline, processQueue]);
 
   const clearQueue = () => setQueue([]);
   

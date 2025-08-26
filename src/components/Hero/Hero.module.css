@@ -204,9 +204,9 @@
   background: linear-gradient(135deg, #D2691E, #CD853F);
 }
 
-/* Dark mode: darker blue-grey overlay and image filter */
+/* Dark mode: darker grey overlay and image filter */
 [data-theme="dark"] .profileImage {
-  filter: brightness(0.7) contrast(1.1) sepia(0.2) hue-rotate(200deg) saturate(0.8);
+  filter: brightness(0.7) contrast(1.1) sepia(0.1) saturate(0.3);
   transition: filter 0.3s ease;
 }
 

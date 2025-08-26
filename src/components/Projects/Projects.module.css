@@ -52,8 +52,11 @@
 
 
 [data-theme="dark"] .projectLink:hover {
-  background: #40E0D0;
-  border-color: #40E0D0;
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 [data-theme="dark"] .techTag:hover {

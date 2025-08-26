@@ -18,12 +18,12 @@ const LazyImage = ({
   ...props
 }) => {
   const [imageSrc, setImageSrc] = useState(placeholder);
-  const [imageRef, setImageRef] = useState(null);
+  const [_imageRef, setImageRef] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const [hasStartedLoading, setHasStartedLoading] = useState(false);
   
-  const [intersectionRef, isIntersecting, hasIntersected] = useIntersectionObserver({
+  const [intersectionRef, _isIntersecting, hasIntersected] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px'
   });

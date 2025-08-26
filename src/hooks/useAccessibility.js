@@ -178,7 +178,7 @@ export const useARIA = (initialAttributes = {}) => {
     if (Object.keys(initialAttributes).length > 0) {
       setARIA(initialAttributes);
     }
-  }, []);
+  }, [initialAttributes]);
 
   return {
     elementRef,

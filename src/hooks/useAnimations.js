@@ -28,20 +28,20 @@ export const useScrollAnimation = (options = {}) => {
         ref.current.classList.add('no-animation');
       }
     }
-  }, [hasIntersected, prefersReducedMotion, animationClass]);
+  }, [hasIntersected, prefersReducedMotion, animationClass, ref]);
 
   return [ref, isIntersecting, hasIntersected];
 };
 
 // Hook for staggered animations
-export const useStaggeredAnimation = (items = [], options = {}) => {
+export const useStaggeredAnimation = (options = {}) => {
   const { delay = 100, animationClass = 'animate-in' } = options;
   const [isVisible, setIsVisible] = useState(false);
-  const containerRef = useRef(null);
+  const _containerRef = useRef(null);
   const itemRefs = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  const [intersectionRef, , hasIntersected] = useIntersectionObserver({
+  const [intersectionRef, _isIntersecting, hasIntersected] = useIntersectionObserver({
     threshold: 0.1,
     triggerOnce: true
   });
@@ -149,7 +149,7 @@ export const useParallax = (speed = 0.5) => {
 
     const handleScroll = () => {
       if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
+        const _rect = elementRef.current.getBoundingClientRect();
         const scrolled = window.pageYOffset;
         const parallax = scrolled * speed;
         setOffset(parallax);

@@ -36,6 +36,14 @@
   transition: background 0.3s ease;
 }
 
+/* Dark mode: use same gradient as name in header */
+[data-theme="dark"] .title {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 
 .description {
   font-size: 1.125rem;
@@ -68,9 +76,9 @@
   transform: translateX(8px);
 }
 
-/* Dark mode: blue hover for contact items */
+/* Dark mode: use name gradient colors for contact items */
 [data-theme="dark"] .contactItem:hover {
-  color: var(--color-blue);
+  color: #40E0D0;
 }
 
 .icon {
@@ -132,13 +140,13 @@
   transform: translateY(-50%);
 }
 
-/* Dark mode: blue hovers for links */
+/* Dark mode: use name gradient colors for links */
 [data-theme="dark"] .link:hover {
-  color: var(--color-blue);
+  color: #40E0D0;
 }
 
 [data-theme="dark"] .link::before {
-  background: var(--color-blue);
+  background: #40E0D0;
 }
 
 .link:hover::before {
@@ -174,10 +182,10 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Dark mode: blue hovers for Contact section */
+/* Dark mode: use name gradient colors for social links */
 [data-theme="dark"] .socialLink:hover {
-  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-light));
-  border-color: var(--color-blue);
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  border-color: #40E0D0;
 }
 
 .availability {
@@ -191,9 +199,9 @@
   border-left: 3px solid var(--primary);
 }
 
-/* Dark mode: blue border for availability */
+/* Dark mode: use name gradient colors for availability border */
 [data-theme="dark"] .availability {
-  border-left-color: var(--color-blue);
+  border-left-color: #40E0D0;
 }
 
 .footer {

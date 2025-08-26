@@ -79,7 +79,7 @@ function App() {
           </Layout>
 
           <NetworkStatus 
-            showConnectionInfo={process.env.NODE_ENV === 'development'}
+            showConnectionInfo={import.meta.env.DEV}
             position="top"
             autoHide={true}
           />

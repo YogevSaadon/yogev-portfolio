@@ -198,7 +198,7 @@ class PerformanceMonitor {
     this.metrics.set(`${name}_${timestamp}`, metric);
     
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`, metadata);
     }
 
@@ -238,7 +238,7 @@ class PerformanceMonitor {
       
       try {
         navigator.sendBeacon(endpoint, data);
-      } catch (error) {
+      } catch {
         // Fallback to fetch if sendBeacon fails
         fetch(endpoint, {
           method: 'POST',

@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 
 export const useIntersectionObserver = (options = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasIntersected, setHasIntersected] = useState(false);
   const elementRef = useRef(null);
 
-  const defaultOptions = {
+  const defaultOptions = useMemo(() => ({
     threshold: 0.1,
     rootMargin: '0px',
     triggerOnce: true,
     ...options
-  };
+  }), [options]);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -42,7 +42,7 @@ export const useIntersectionObserver = (options = {}) => {
         observer.unobserve(element);
       }
     };
-  }, [hasIntersected, defaultOptions.threshold, defaultOptions.rootMargin, defaultOptions.triggerOnce]);
+  }, [hasIntersected, defaultOptions]);
 
   return [elementRef, isIntersecting, hasIntersected];
 };

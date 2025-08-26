@@ -17,12 +17,22 @@
   --accent-primary: var(--color-orange);
   --accent-secondary: var(--color-blue);
   
+  /* Legacy Variable Aliases (for existing components) */
+  --primary: var(--color-orange);
+  --secondary: var(--color-orange-light);
+  --text: var(--text-primary);
+  --background: var(--bg-primary);
+  --surface: var(--bg-surface);
+  --border: rgba(210, 105, 30, 0.1);
+  
   /* Component-Specific Tokens */
   --bubble-gradient-start: var(--color-orange);
   --bubble-gradient-end: var(--color-orange-light);
   --profile-border: var(--color-orange);
   --selection-bg: rgba(210, 105, 30, 0.3);
   --line-color: var(--color-orange);
+  --title-gradient-start: var(--color-orange);
+  --title-gradient-end: var(--color-orange-light);
   
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -63,12 +73,22 @@
   --accent-primary: var(--color-orange);
   --accent-secondary: var(--color-blue);
   
+  /* Legacy Variable Aliases (for existing components) */
+  --primary: var(--color-orange);
+  --secondary: var(--color-orange-light);
+  --text: var(--text-primary);
+  --background: var(--bg-primary);
+  --surface: var(--bg-surface);
+  --border: rgba(217, 119, 6, 0.1);
+
   /* Dark Mode Component-Specific */
   --bubble-gradient-start: var(--color-blue);
   --bubble-gradient-end: var(--color-blue-light);
   --profile-border: var(--color-blue);
   --selection-bg: var(--color-blue);
   --line-color: var(--color-blue);
+  --title-gradient-start: var(--color-blue);
+  --title-gradient-end: var(--color-blue-light);
   
   /* Dark Mode Glassmorphism */
   --glass-bg: rgba(0, 0, 0, 0.2);

@@ -165,6 +165,11 @@ NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.
 NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
 
+# GIT POLICY - CRITICAL RULE
+NEVER push to GitHub unless the user EXPLICITLY tells you to push.
+NEVER use git push commands unless specifically requested.
+You can commit changes locally, but DO NOT push to remote unless asked.
+
 # CRITICAL DEBUGGING RULE
 ONLY FIX PROBLEMS IF YOU 100% IDENTIFIED THEM. IF NOT, ASK FOR WHAT TO DO.
 IF YOU 100% FOUND THE PROBLEM, FIX IT ON YOUR OWN INSTEAD OF ASKING.

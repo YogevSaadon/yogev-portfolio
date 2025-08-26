@@ -171,6 +171,11 @@
   box-shadow: 0 0 0 2px var(--primary), 0 0 15px var(--primary);
 }
 
+/* Light mode: make border more visible with darker orange */
+[data-theme="light"] .skillItem:hover .skillBullet {
+  box-shadow: 0 0 0 2px #B45309, 0 0 15px var(--primary);
+}
+
 
 /* Animation on scroll */
 .skillCategory {

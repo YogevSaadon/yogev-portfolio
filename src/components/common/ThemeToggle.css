@@ -16,6 +16,16 @@
   position: relative;
 }
 
+/* Sun icon should be orange/yellow in light mode */
+.theme-toggle--button .theme-toggle__icon {
+  color: #F59E0B;
+}
+
+/* Moon icon in dark mode - keep the gradient */
+[data-theme="dark"] .theme-toggle--button .theme-toggle__icon {
+  color: var(--color-text);
+}
+
 .theme-toggle--button:hover {
   background-color: var(--color-hover);
   border-color: var(--color-border-hover);

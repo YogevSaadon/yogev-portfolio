@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import profileImage from '../../assets/profile2.jpg';
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
               <img 
-                src="/src/assets/profile 2.jpg" 
+                src={profileImage} 
                 alt="Yogev Saadon - Full Stack Developer"
                 className={styles.profileImage}
                 width="400"

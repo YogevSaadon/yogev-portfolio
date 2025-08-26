@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
 import p1pic from '../../assets/p1pic.png';
+import logoImage from '../../assets/logo.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -24,7 +25,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: "/logo.png",
+      image: logoImage,
       imageAlt: "Yogev Saadon portfolio website logo",
       technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
       githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",

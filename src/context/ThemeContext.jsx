@@ -56,7 +56,7 @@ export const ThemeProvider = ({ children }) => {
     const root = document.documentElement;
     
     // Add a transition class to prevent flashing
-    root.classList.add('theme-transitioning');
+    root.classList.add('theme-changing');
     
     // Remove existing theme classes
     root.classList.remove('light', 'dark');
@@ -69,7 +69,7 @@ export const ThemeProvider = ({ children }) => {
     
     // Remove transition class after a brief delay
     setTimeout(() => {
-      root.classList.remove('theme-transitioning');
+      root.classList.remove('theme-changing');
     }, 300);
     
     // Update meta theme-color for mobile browsers

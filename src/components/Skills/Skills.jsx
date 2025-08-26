@@ -24,8 +24,9 @@ const Skills = () => {
       title: "Databases, Tools & Monitoring",
       skills: [
         "Git",
-        "GitHub",
-        "VS Code"
+        "GitHub", 
+        "VS Code",
+        "ESLint"
       ]
     }
   ];

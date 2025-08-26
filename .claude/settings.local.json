@@ -10,7 +10,8 @@
       "Bash(npm install)",
       "Bash(npm install:*)",
       "Bash(npm run lint)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(md5sum:*)"
     ],
     "deny": [],
     "ask": []

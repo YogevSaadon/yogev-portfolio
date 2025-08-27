@@ -105,9 +105,8 @@
 
 .projectCard {
   flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-backdrop);
   border: 1px solid var(--glass-border);
@@ -116,8 +115,14 @@
   box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
   max-width: 900px;
-  min-height: 400px;
-  max-height: 500px;
+}
+
+.projectTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  min-height: 300px;
+  margin-bottom: 0;
 }
 
 .projectCard:hover {
@@ -195,10 +200,20 @@
 
 .projectContent {
   padding: var(--spacing-xl);
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
   overflow: hidden;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
 .projectTitle {
@@ -214,17 +229,17 @@
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
+  min-height: 120px;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.05);
+  margin-top: -10px;
 }
 
 .techTag {

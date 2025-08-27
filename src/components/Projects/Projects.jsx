@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
 import projectOneImage from '../../assets/projects/projectOne.png';
+import projectTwoImage from '../../assets/projects/ProjectTwo.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -12,7 +13,7 @@ const Projects = () => {
       description: "Real-time bullet-heaven focused on clean architecture and practical performance.",
       image: projectOneImage,
       imageAlt: "Void Gambit game screenshot showing bullet-hell gameplay",
-      technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design", "Performance Under Constraints"],
+      technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design"],
       githubUrl: "https://github.com/YogevSaadon/void-gambit",
       demoUrl: "https://yogevsaadon.github.io/void-gambit/",
       learnings: [
@@ -24,7 +25,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: projectOneImage, // Testing: using same image as project 1
+      image: projectTwoImage,
       imageAlt: "Yogev Saadon portfolio website logo",
       technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
       githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",
@@ -70,56 +71,59 @@ const Projects = () => {
           </button>
 
           <div className={styles.projectCard}>
-            <div className={styles.projectImage}>
-              <img 
-                src={projects[currentProject].image}
-                alt={projects[currentProject].imageAlt}
-                width="600"
-                height="400"
-              />
-              <div className={styles.imageOverlay}>
-                <div className={styles.projectLinks}>
-                  <a 
-                    href={projects[currentProject].githubUrl}
-                    className={styles.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View GitHub repository"
-                  >
-                    <Share2 size={20} />
-                    <span>Code</span>
-                  </a>
-                  <a 
-                    href={projects[currentProject].demoUrl}
-                    className={styles.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View live demo"
-                  >
-                    <ExternalLink size={20} />
-                    <span>Demo</span>
-                  </a>
+            <div className={styles.projectTop}>
+              <div className={styles.projectImage}>
+                <img 
+                  src={projects[currentProject].image}
+                  alt={projects[currentProject].imageAlt}
+                  width="600"
+                  height="400"
+                />
+                <div className={styles.imageOverlay}>
+                  <div className={styles.projectLinks}>
+                    <a 
+                      href={projects[currentProject].githubUrl}
+                      className={styles.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View GitHub repository"
+                    >
+                      <Share2 size={20} />
+                      <span>Code</span>
+                    </a>
+                    <a 
+                      href={projects[currentProject].demoUrl}
+                      className={styles.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View live demo"
+                    >
+                      <ExternalLink size={20} />
+                      <span>Demo</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.projectContent}>
+                <div className={styles.textSection}>
+                  <h3 className={styles.projectTitle}>
+                    {projects[currentProject].title}
+                  </h3>
+                  
+                  <p className={styles.projectDescription}>
+                    {projects[currentProject].description}
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className={styles.projectContent}>
-              <h3 className={styles.projectTitle}>
-                {projects[currentProject].title}
-              </h3>
-              
-              <p className={styles.projectDescription}>
-                {projects[currentProject].description}
-              </p>
-
-              <div className={styles.technologies}>
-                {projects[currentProject].technologies.map((tech, index) => (
-                  <span key={index} className={styles.techTag}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
+            <div className={styles.technologies}>
+              {projects[currentProject].technologies.map((tech, index) => (
+                <span key={index} className={styles.techTag}>
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
 

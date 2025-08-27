@@ -117,6 +117,7 @@ const SEOHead = ({
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#4A90E2" />
       <meta name="msapplication-TileColor" content="#4A90E2" />
+      <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content={siteName} />

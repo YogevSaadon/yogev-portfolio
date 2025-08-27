@@ -163,12 +163,8 @@ export const checkSEO = (config) => {
 
 // Performance monitoring for SEO
 export const trackPageView = (page, title) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: title,
-      page_location: window.location.href
-    });
-  }
+  // Disabled to prevent analytics calls
+  return;
 };
 
 // Social sharing utilities

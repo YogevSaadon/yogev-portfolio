@@ -18,12 +18,7 @@ class ErrorBoundary extends Component {
       errorInfo
     });
 
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false
-      });
-    }
+    // Analytics disabled to prevent errors
   }
 
   handleReload = () => {

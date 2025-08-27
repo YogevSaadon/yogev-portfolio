@@ -221,10 +221,8 @@ class PerformanceMonitor {
   }
 
   sendToCustomAnalytics(metric) {
-    // Skip analytics in development to avoid 404 spam
-    if (import.meta.env.DEV) {
-      return;
-    }
+    // Disable analytics completely to avoid spam
+    return;
 
     // Custom analytics endpoint
     if ('navigator' in window && 'sendBeacon' in navigator) {

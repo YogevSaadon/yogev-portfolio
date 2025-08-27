@@ -10,7 +10,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Void Gambit",
-      description: "Real-time bullet-heaven focused on clean architecture and practical performance.",
+      description: "Real-time bullet-heaven focused on clean architecture and practical performance engineering: math-driven targeting (no physics), staggered updates, cached queries, and zone-based AI with hysteresis.",
       image: projectOneImage,
       imageAlt: "Void Gambit game screenshot showing bullet-hell gameplay",
       technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design"],

@@ -335,8 +335,10 @@
     display: none;
   }
   
-  .projectCard {
+  .projectTop {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    min-height: auto;
   }
   
   .projectContent {
@@ -346,9 +348,12 @@
   .projectTitle {
     font-size: 1.5rem;
   }
-}
-
-@media (max-width: 480px) {
+  
+  .projectImage {
+    min-height: 200px;
+    max-height: 250px;
+  }
+  
   .container {
     padding: 0 var(--spacing-sm);
   }
@@ -359,9 +364,10 @@
   
   .technologies {
     gap: var(--spacing-xs);
+    padding: var(--spacing-md);
   }
   
   .techTag {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 }

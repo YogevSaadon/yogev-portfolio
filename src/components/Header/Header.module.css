@@ -10,7 +10,6 @@
 
 .header.scrolled {
   background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
   border-bottom: 1px solid var(--glass-border);
   padding: var(--spacing-sm) 0;
 }
@@ -76,6 +75,18 @@
 
 [data-theme="dark"] .navLink::after {
   background: linear-gradient(135deg, #40E0D0, #0080FF) !important;
+}
+
+/* Dark mode mobile menu fixes */
+[data-theme="dark"] .mobileNavLink {
+  color: #9CA3AF !important;
+  border-bottom-color: rgba(64, 224, 208, 0.2) !important;
+}
+
+[data-theme="dark"] .mobileNavLink:hover,
+[data-theme="dark"] .mobileNavLink.active {
+  color: #40E0D0 !important;
+  border-bottom-color: rgba(64, 224, 208, 0.4) !important;
 }
 
 .nav {

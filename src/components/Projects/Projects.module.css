@@ -326,6 +326,24 @@
 
 /* Responsive Design */
 @media (max-width: 480px) {
+  .indicator {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+  }
+  
+  .indicator:focus,
+  .indicator:active,
+  .indicator:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
   .carousel {
     flex-direction: column;
     gap: var(--spacing-md);

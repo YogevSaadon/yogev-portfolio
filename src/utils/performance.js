@@ -202,8 +202,7 @@ class PerformanceMonitor {
       console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`, metadata);
     }
 
-    // Send to analytics service (if configured)
-    this.sendToAnalytics(metric);
+    // Analytics completely disabled to prevent rate limiting
   }
 
   sendToAnalytics() {
@@ -237,12 +236,8 @@ class PerformanceMonitor {
   }
 
   flushMetrics() {
-    // Send all collected metrics when page is hidden
-    const metricsArray = Array.from(this.metrics.values());
-    if (metricsArray.length > 0) {
-      const summary = this.generateMetricsSummary(metricsArray);
-      this.sendToAnalytics(summary);
-    }
+    // Analytics disabled - no metrics flushing to prevent rate limiting
+    return;
   }
 
   generateMetricsSummary(metrics) {

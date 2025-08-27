@@ -207,17 +207,8 @@ class PerformanceMonitor {
   }
 
   sendToAnalytics(metric) {
-    // Integration with Google Analytics 4
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'web_vital', {
-        metric_name: metric.name,
-        metric_value: Math.round(metric.value),
-        custom_parameters: metric.metadata
-      });
-    }
-
-    // Integration with other analytics services can be added here
-    this.sendToCustomAnalytics(metric);
+    // Analytics completely disabled to prevent 429 errors
+    return;
   }
 
   sendToCustomAnalytics() {

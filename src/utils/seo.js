@@ -162,7 +162,7 @@ export const checkSEO = (config) => {
 };
 
 // Performance monitoring for SEO
-export const trackPageView = (page, title) => {
+export const trackPageView = () => {
   // Disabled to prevent analytics calls
   return;
 };

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
-import p1pic from '../../assets/p1pic.png';
-import logoImage from '../../assets/logo.png';
+import projectOneImage from '../../assets/projects/projectOne.png';
+import projectTwoImage from '../../assets/projects/ProjectTwo.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -11,7 +11,7 @@ const Projects = () => {
     {
       title: "Void Gambit",
       description: "Real-time bullet-heaven focused on clean architecture and practical performance.",
-      image: p1pic,
+      image: projectOneImage,
       imageAlt: "Void Gambit game screenshot showing bullet-hell gameplay",
       technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design", "Performance Under Constraints"],
       githubUrl: "https://github.com/YogevSaadon/void-gambit",
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: logoImage,
+      image: projectTwoImage,
       imageAlt: "Yogev Saadon portfolio website logo",
       technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
       githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",

@@ -1,5 +1,5 @@
 import styles from './Hero.module.css';
-import profileImage from '../../assets/profile2.jpg';
+import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
   return (

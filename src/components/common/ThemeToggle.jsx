@@ -2,10 +2,10 @@ import { useTheme } from '../../context/ThemeContext';
 import './ThemeToggle.css';
 
 const ThemeToggle = ({ className = '', showLabel = true, variant = 'button' }) => {
-  const { theme, toggleTheme, isDarkMode, isSystemMode } = useTheme();
+  const { theme, actualTheme, toggleTheme, isDarkMode, isSystemMode } = useTheme();
 
   const getIcon = () => {
-    if (theme === 'light' || theme === 'system') {
+    if (actualTheme === 'light') {
       return (
         <svg
           viewBox="0 0 24 24"
@@ -51,13 +51,13 @@ const ThemeToggle = ({ className = '', showLabel = true, variant = 'button' }) =
   };
 
   const getLabel = () => {
-    if (theme === 'light' || theme === 'system') return 'Light mode';
+    if (actualTheme === 'light') return 'Light mode';
     return 'Dark mode';
   };
 
   const getAriaLabel = () => {
     const currentMode = getLabel().toLowerCase();
-    const nextMode = (theme === 'light' || theme === 'system') ? 'dark mode' : 'light mode';
+    const nextMode = actualTheme === 'light' ? 'dark mode' : 'light mode';
     return `Currently using ${currentMode}. Click to switch to ${nextMode}`;
   };
 

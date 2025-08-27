@@ -97,7 +97,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   const toggleTheme = () => {
-    if (theme === 'light' || theme === 'system') {
+    if (actualTheme === 'light') {
       setThemeMode('dark');
     } else {
       setThemeMode('light');

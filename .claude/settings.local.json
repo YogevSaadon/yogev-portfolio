@@ -15,7 +15,9 @@
       "Bash(git config:*)",
       "Bash(git log:*)",
       "WebSearch",
-      "WebSearch"
+      "WebSearch",
+      "Bash(gh repo view:*)",
+      "Bash(gh repo edit:*)"
     ],
     "deny": [],
     "ask": [],

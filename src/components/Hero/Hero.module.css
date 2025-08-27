@@ -42,8 +42,6 @@
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 400;
   color: var(--text-secondary);
-  opacity: 0;
-  animation: slideInUp 0.8s ease 0.2s forwards;
 }
 
 .name {
@@ -55,8 +53,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0;
-  animation: slideInUp 0.8s ease 0.4s forwards;
   transition: all 0.3s ease;
 }
 
@@ -68,13 +64,12 @@
   background-clip: text;
 }
 
+
 .subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 500;
   color: var(--text);
   margin-bottom: var(--spacing-sm);
-  opacity: 0;
-  animation: slideInUp 0.8s ease 0.6s forwards;
 }
 
 .description {
@@ -82,8 +77,6 @@
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 500px;
-  opacity: 0;
-  animation: slideInUp 0.8s ease 0.8s forwards;
 }
 
 .skills {
@@ -149,8 +142,6 @@
   background: var(--surface);
   border: 2px solid var(--border);
   box-shadow: var(--shadow-xl);
-  opacity: 0;
-  animation: scaleIn 1s ease 0.5s forwards;
   
   /* Prevent context menu and selection on container */
   -webkit-user-select: none;

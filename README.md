@@ -1,7 +1,8 @@
 # Yogev Saadon - Portfolio
 
 A clean, responsive portfolio website built with React and Vite.
-Live Site: yogev-portfolio.vercel.app
+
+**[Live Site](https://yogevsaadon.github.io/yogev-portfolio/)**
 
 ## Tech Stack
 
@@ -14,10 +15,11 @@ Live Site: yogev-portfolio.vercel.app
 
 ## Features
 
-- Responsive design that works on all devices
-- Clean, modern interface
-- Fast loading and optimized performance
-- Easy to navigate sections
+- **Responsive Design** - Optimized for mobile, tablet, and desktop
+- **Dark/Light Mode** - System preference detection with manual toggle
+- **Modern Interface** - Clean, professional design with smooth animations
+- **Performance Optimized** - Fast loading with Core Web Vitals monitoring
+- **Accessibility** - WCAG compliant with keyboard navigation support
 
 ## Development Process
 

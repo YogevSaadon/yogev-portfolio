@@ -258,7 +258,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .timeline {
     grid-template-columns: 1fr;
   }

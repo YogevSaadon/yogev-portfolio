@@ -239,7 +239,7 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .theme-toggle__label {
     display: none;
   }

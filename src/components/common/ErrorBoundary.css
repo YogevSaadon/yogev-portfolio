@@ -110,7 +110,7 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .error-boundary__container {
     margin: 1rem;
     padding: 1.5rem;

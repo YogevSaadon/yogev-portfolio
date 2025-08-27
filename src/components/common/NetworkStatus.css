@@ -146,7 +146,7 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .network-status {
     left: 1rem;
     right: 1rem;

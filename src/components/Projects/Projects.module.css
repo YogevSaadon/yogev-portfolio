@@ -310,7 +310,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .carousel {
     flex-direction: column;
     gap: var(--spacing-md);

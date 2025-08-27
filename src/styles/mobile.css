@@ -240,7 +240,7 @@
 /* === MOBILE PERFORMANCE OPTIMIZATIONS === */
 
 /* Reduce animations on mobile for performance */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .reduce-motion {
     animation-duration: 0.3s !important;
     transition-duration: 0.2s !important;
@@ -252,7 +252,7 @@
 }
 
 /* Mobile-specific scroll behavior */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .mobile-scroll {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
@@ -262,7 +262,7 @@
 /* === MOBILE ACCESSIBILITY === */
 
 /* Ensure touch targets are large enough */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   button, 
   .button, 
   [role="button"],
@@ -275,7 +275,7 @@
 }
 
 /* Mobile focus styles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   *:focus {
     outline: 3px solid var(--accent-primary);
     outline-offset: 2px;

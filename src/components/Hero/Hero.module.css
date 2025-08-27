@@ -311,7 +311,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero {
     padding-top: 60px;
     min-height: auto;

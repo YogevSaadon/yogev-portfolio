@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 
+// Breakpoints - matches mobile.css
+const BREAKPOINTS = {
+  mobile: 480,
+  tablet: 768,
+  laptop: 1024,
+  desktop: 1200
+};
+
 /**
  * Custom hook for mobile detection and responsive utilities
  * Centralizes all mobile-related logic in one place
@@ -18,13 +26,6 @@ export const useMobile = () => {
     orientation: 'landscape'
   });
 
-  // Breakpoints - matches mobile.css
-  const breakpoints = {
-    mobile: 480,
-    tablet: 768,
-    laptop: 1024,
-    desktop: 1200
-  };
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -34,9 +35,9 @@ export const useMobile = () => {
       setScreenSize({ width, height });
       
       // Detect device type based on screen width
-      const isMobile = width <= breakpoints.mobile;
-      const isTablet = width > breakpoints.mobile && width <= breakpoints.tablet;
-      const isDesktop = width > breakpoints.tablet;
+      const isMobile = width <= BREAKPOINTS.mobile;
+      const isTablet = width > BREAKPOINTS.mobile && width <= BREAKPOINTS.tablet;
+      const isDesktop = width > BREAKPOINTS.tablet;
       const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       const orientation = width > height ? 'landscape' : 'portrait';
       
@@ -64,24 +65,24 @@ export const useMobile = () => {
   }, []);
 
   // Utility functions
-  const isMobileSize = (customBreakpoint = breakpoints.mobile) => {
+  const isMobileSize = (customBreakpoint = BREAKPOINTS.mobile) => {
     return screenSize.width <= customBreakpoint;
   };
 
-  const isTabletSize = (minWidth = breakpoints.mobile, maxWidth = breakpoints.tablet) => {
+  const isTabletSize = (minWidth = BREAKPOINTS.mobile, maxWidth = BREAKPOINTS.tablet) => {
     return screenSize.width > minWidth && screenSize.width <= maxWidth;
   };
 
-  const isDesktopSize = (customBreakpoint = breakpoints.tablet) => {
+  const isDesktopSize = (customBreakpoint = BREAKPOINTS.tablet) => {
     return screenSize.width > customBreakpoint;
   };
 
   // Get current breakpoint name
   const getCurrentBreakpoint = () => {
     const { width } = screenSize;
-    if (width <= breakpoints.mobile) return 'mobile';
-    if (width <= breakpoints.tablet) return 'tablet';
-    if (width <= breakpoints.laptop) return 'laptop';
+    if (width <= BREAKPOINTS.mobile) return 'mobile';
+    if (width <= BREAKPOINTS.tablet) return 'tablet';
+    if (width <= BREAKPOINTS.laptop) return 'laptop';
     return 'desktop';
   };
 
@@ -100,7 +101,7 @@ export const useMobile = () => {
     // Screen info
     screenSize,
     deviceInfo,
-    breakpoints,
+    BREAKPOINTS,
     
     // Utility functions
     isMobileSize,

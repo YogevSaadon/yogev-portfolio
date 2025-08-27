@@ -11,7 +11,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   
-  const { isMobile, shouldShowMobileNav } = useMobile();
+  const { shouldShowMobileNav } = useMobile();
   const [headerRef] = useScrollAnimation({ animationClass: 'animate-fade-in' });
 
   useEffect(() => {

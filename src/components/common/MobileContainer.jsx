@@ -14,7 +14,7 @@ const MobileContainer = ({
   center = false,
   maxWidth = '1200px'
 }) => {
-  const { isMobile, isTablet, isDesktop, getCurrentBreakpoint } = useMobile();
+  const { isMobile, isDesktop, getCurrentBreakpoint } = useMobile();
 
   // Hide component based on device type
   if (mobileOnly && !isMobile) return null;

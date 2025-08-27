@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: projectTwoImage,
+      image: projectOneImage,
       imageAlt: "Yogev Saadon portfolio website logo",
       technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
       githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",

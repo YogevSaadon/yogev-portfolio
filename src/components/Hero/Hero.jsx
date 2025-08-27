@@ -15,7 +15,7 @@ const Hero = () => {
               Software Engineer | Computer Science
             </p>
             <p className={styles.description}>
-              Developer and creator with a strong foundation in data structures, algorithms, and problem-solving. Skilled in Python and scripting languages, I enjoy designing and building projects that combine analytical thinking with creativity—from interactive applications to systems driven by math and logic. Passionate about generative AI and deep learning, I'm motivated by the challenge of transforming complex ideas into impactful, real-world solutions.
+              Developer and creator with a strong foundation in data structures, algorithms, and problem-solving. Skilled in Python and scripting languages, I enjoy designing and building projects that combine analytical thinking with creativity. Passionate about generative AI and deep learning, I'm motivated by the challenge of transforming complex ideas into impactful, real-world solutions.
             </p>
           </div>
           

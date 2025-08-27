@@ -197,8 +197,8 @@ class PerformanceMonitor {
 
     this.metrics.set(`${name}_${timestamp}`, metric);
     
-    // Log to console in development
-    if (import.meta.env.DEV) {
+    // Reduced logging in development to avoid console spam
+    if (import.meta.env.DEV && name === 'LCP') {
       console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`, metadata);
     }
 
@@ -221,6 +221,11 @@ class PerformanceMonitor {
   }
 
   sendToCustomAnalytics(metric) {
+    // Skip analytics in development to avoid 404 spam
+    if (import.meta.env.DEV) {
+      return;
+    }
+
     // Custom analytics endpoint
     if ('navigator' in window && 'sendBeacon' in navigator) {
       const data = JSON.stringify({

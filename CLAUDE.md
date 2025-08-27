@@ -205,3 +205,98 @@ You can commit changes locally, but DO NOT push to remote unless asked.
 # CRITICAL DEBUGGING RULE
 ONLY FIX PROBLEMS IF YOU 100% IDENTIFIED THEM. IF NOT, ASK FOR WHAT TO DO.
 IF YOU 100% FOUND THE PROBLEM, FIX IT ON YOUR OWN INSTEAD OF ASKING.
+
+## Mobile Architecture System
+
+### Centralized Mobile Management
+The mobile system is architected for easy changes and scaling:
+
+**Files that control mobile behavior:**
+- `src/styles/mobile.css` - All mobile breakpoints, utilities, and patterns
+- `src/hooks/useMobile.js` - React hook for mobile detection and utilities
+- `src/components/common/MobileContainer.jsx` - Smart responsive container
+
+### Mobile Breakpoints (Easily Changeable)
+```css
+:root {
+  --breakpoint-mobile: 480px;    /* Change here to adjust mobile breakpoint */
+  --breakpoint-tablet: 768px;    /* Change here to adjust tablet breakpoint */
+  --breakpoint-laptop: 1024px;   /* Change here to adjust laptop breakpoint */
+  --breakpoint-desktop: 1200px;  /* Change here to adjust desktop breakpoint */
+}
+```
+
+### Mobile-Specific Design Tokens
+All mobile spacing, typography, and sizing controlled in one place:
+```css
+/* Mobile spacing - change these to adjust all mobile spacing */
+--mobile-spacing-xs: 0.25rem;
+--mobile-spacing-sm: 0.5rem;
+--mobile-spacing-md: 1rem;
+
+/* Mobile typography - change these to adjust all mobile text sizes */
+--mobile-text-xs: 0.75rem;
+--mobile-text-lg: 1.125rem;
+
+/* Mobile touch targets - ensures accessibility */
+--mobile-touch-target: 44px;  /* Apple/Android minimum recommendation */
+```
+
+### Making Mobile-Only Changes
+```css
+/* Apply styles only on mobile */
+@media (max-width: 480px) {
+  .myComponent {
+    /* Mobile-only styles here */
+  }
+}
+```
+
+### Using Mobile Utilities in Components
+```jsx
+import { useMobile } from './hooks/useMobile';
+
+function MyComponent() {
+  const { isMobile, shouldShowMobileNav, getCurrentBreakpoint } = useMobile();
+  
+  return (
+    <div>
+      {shouldShowMobileNav() && <MobileMenu />}
+      {!isMobile && <DesktopFeatures />}
+    </div>
+  );
+}
+```
+
+### Mobile Utility Classes (Available Everywhere)
+```html
+<!-- Visibility controls -->
+<div class="mobile-only">Only shows on mobile</div>
+<div class="desktop-only">Only shows on desktop</div>
+
+<!-- Layout utilities -->
+<div class="mobile-container mobile-stack mobile-center">
+  Mobile-optimized container
+</div>
+
+<!-- Typography utilities -->
+<span class="mobile-text-lg">Mobile-sized text</span>
+
+<!-- Touch-friendly elements -->
+<button class="mobile-touch-target">Touch-friendly button</button>
+```
+
+### Component Architecture for Mobile
+1. **Header**: Uses `useMobile()` hook for responsive navigation
+2. **Hero**: Responsive grid that stacks on mobile
+3. **MobileContainer**: Smart container that adapts padding/layout
+4. **All components**: Can use mobile utility classes and CSS custom properties
+
+### Scaling the Mobile System
+To add new mobile functionality:
+1. **Breakpoints**: Change in `mobile.css:4-7`
+2. **Spacing**: Add to `mobile.css:9-14` 
+3. **Components**: Use `useMobile()` hook and mobile utilities
+4. **Styling**: Use mobile CSS custom properties for consistency
+
+The system is designed so changes in one file propagate everywhere automatically.

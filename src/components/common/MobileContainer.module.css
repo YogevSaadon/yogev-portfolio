@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  transition: padding 0.2s ease;
+}
+
+/* Padding variants */
+.noPadding {
+  padding: 0;
+}
+
+.smallPadding {
+  padding: 0 var(--mobile-spacing-sm);
+}
+
+.defaultPadding {
+  padding: 0 var(--mobile-spacing-md);
+}
+
+.largePadding {
+  padding: 0 var(--mobile-spacing-lg);
+}
+
+.center {
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .smallPadding {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .defaultPadding {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .largePadding {
+    padding: 0 var(--spacing-xl);
+  }
+}

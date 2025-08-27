@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from '../common/ThemeToggle';
 import { useScrollAnimation } from '../../hooks/useAnimations';
-import { useResponsive } from '../../hooks/useResponsive';
+import { useMobile } from '../../hooks/useMobile';
 import { useKeyboardNavigation } from '../../hooks/useAccessibility';
 import styles from './Header.module.css';
 
@@ -11,7 +11,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   
-  const { isMobile } = useResponsive();
+  const { isMobile, shouldShowMobileNav } = useMobile();
   const [headerRef] = useScrollAnimation({ animationClass: 'animate-fade-in' });
 
   useEffect(() => {
@@ -105,7 +105,7 @@ const Header = () => {
             showLabel={false} 
           />
           
-          {isMobile && (
+          {shouldShowMobileNav() && (
             <button
               className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.active : ''}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -118,7 +118,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobile && (
+        {shouldShowMobileNav() && (
           <nav 
             className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ''}`}
             role="navigation" 
@@ -140,7 +140,7 @@ const Header = () => {
         )}
 
         {/* Mobile Menu Backdrop */}
-        {isMobile && isMobileMenuOpen && (
+        {shouldShowMobileNav() && isMobileMenuOpen && (
           <div 
             className={styles.mobileMenuBackdrop}
             onClick={() => setIsMobileMenuOpen(false)}

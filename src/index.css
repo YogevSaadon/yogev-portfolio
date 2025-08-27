@@ -1,4 +1,13 @@
-/* Legacy index.css - All styles moved to new CSS architecture in styles/ folder */
+/* Main CSS Architecture Entry Point */
+
+/* Import mobile system first for mobile-first approach */
+@import './styles/mobile.css';
+
+/* Import core styles in order */
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/themes.css';
+@import './styles/components.css';
 
 :root {
   font-synthesis: none;
@@ -7,8 +16,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Note: Theme variables, typography, and components are now in:
-   - styles/variables.css (colors & tokens)
-   - styles/base.css (typography & base styles)  
-   - styles/components.css (component styles)
+/* CSS Architecture:
+   - mobile.css (mobile-first utilities & breakpoints)
+   - variables.css (design tokens & theme variables)
+   - base.css (typography & base styles)  
+   - themes.css (light/dark theme styles)
+   - components.css (reusable component styles)
 */

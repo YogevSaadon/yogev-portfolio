@@ -5,13 +5,10 @@ const Skills = () => {
     {
       title: "Programming & Development",
       skills: [
-        "Java",
-        "C#",
         "Python",
-        "Node.js",
-        "React",
         "GDScript",
-        "Godot (game engine/framework)"
+        "Node.js",
+        "React"
       ]
     },
     {
@@ -25,8 +22,7 @@ const Skills = () => {
       skills: [
         "Git",
         "GitHub", 
-        "VS Code",
-        "ESLint"
+        "VS Code"
       ]
     }
   ];

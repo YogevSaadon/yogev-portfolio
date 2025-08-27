@@ -220,40 +220,9 @@ class PerformanceMonitor {
     this.sendToCustomAnalytics(metric);
   }
 
-  sendToCustomAnalytics(metric) {
+  sendToCustomAnalytics() {
     // Disable analytics completely to avoid spam
     return;
-
-    // Custom analytics endpoint
-    if ('navigator' in window && 'sendBeacon' in navigator) {
-      const data = JSON.stringify({
-        type: 'performance',
-        metric: metric.name,
-        value: metric.value,
-        timestamp: metric.timestamp,
-        url: metric.url,
-        userAgent: navigator.userAgent,
-        connection: this.getConnectionInfo()
-      });
-
-      // Replace with your analytics endpoint
-      const endpoint = '/api/analytics/performance';
-      
-      try {
-        navigator.sendBeacon(endpoint, data);
-      } catch {
-        // Fallback to fetch if sendBeacon fails
-        fetch(endpoint, {
-          method: 'POST',
-          body: data,
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }).catch(() => {
-          // Silent fail for analytics
-        });
-      }
-    }
   }
 
   getConnectionInfo() {

@@ -206,7 +206,7 @@ class PerformanceMonitor {
     this.sendToAnalytics(metric);
   }
 
-  sendToAnalytics(metric) {
+  sendToAnalytics() {
     // Analytics completely disabled to prevent 429 errors
     return;
   }

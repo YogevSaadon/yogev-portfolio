@@ -14,7 +14,7 @@ const Skills = () => {
     {
       title: "Cloud, DevOps & Infrastructure",
       skills: [
-        "CI/CD"
+        "GitHub Actions"
       ]
     },
     {

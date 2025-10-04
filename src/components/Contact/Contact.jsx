@@ -24,7 +24,7 @@ const Contact = () => {
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Quick Links</h3>
               <ul className={styles.linkList}>
-                <li><a href="#about" className={styles.link}>About</a></li>
+                <li><a href="#hero" className={styles.link}>About</a></li>
                 <li><a href="#skills" className={styles.link}>Skills</a></li>
                 <li><a href="#projects" className={styles.link}>Projects</a></li>
                 <li><a href="#education" className={styles.link}>Education</a></li>

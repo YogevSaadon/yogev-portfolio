@@ -3,26 +3,67 @@ import styles from './Skills.module.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Development",
+      title: "Programming Languages",
       skills: [
         "Python",
         "GDScript",
-        "Node.js",
-        "React"
+        "Java",
+        "C#"
       ]
     },
     {
-      title: "Cloud, DevOps & Infrastructure",
+      title: "AI & Machine Learning",
       skills: [
-        "GitHub Actions"
+        "LLMs (Large Language Models)",
+        "RAG (Retrieval-Augmented Generation)",
+        "Embeddings",
+        "MCP (Model Context Protocol)",
+        "Agent Architecture",
+        "Graph Optimization",
+        "Semantic Search"
       ]
     },
     {
-      title: "Databases, Tools & Monitoring",
+      title: "Computer Science Fundamentals",
+      skills: [
+        "Data Structures",
+        "Algorithms",
+        "OOP (Object-Oriented Programming)",
+        "Performance Optimization",
+        "Memory Management",
+        "Complexity Analysis"
+      ]
+    },
+    {
+      title: "Game Development & Systems",
+      skills: [
+        "Godot Engine",
+        "Real-time Systems",
+        "Component Architecture",
+        "Signal-based Communication",
+        "Math-driven AI",
+        "Performance Profiling"
+      ]
+    },
+    {
+      title: "Development Tools & Practices",
       skills: [
         "Git",
-        "GitHub", 
-        "VS Code"
+        "GitHub",
+        "GitHub Actions (CI/CD)",
+        "JSON Data Design",
+        "AST Analysis (LibCST)",
+        "Code Architecture"
+      ]
+    },
+    {
+      title: "Soft Skills & Work Style",
+      skills: [
+        "Independent Work",
+        "Team Collaboration",
+        "Problem Solving",
+        "Technical Documentation",
+        "Self-Learning"
       ]
     }
   ];

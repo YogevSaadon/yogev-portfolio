@@ -3,7 +3,7 @@ import styles from './Education.module.css';
 const Education = () => {
   const educationData = [
     {
-      period: "2022 - 2026",
+      period: "2021 - 2025",
       degree: "Bachelor of Science in Computer Science",
       institution: "The Open University of Israel",
       description: "Pursuing a comprehensive degree in Computer Science with focus on software engineering, algorithms, and data structures.",

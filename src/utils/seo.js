@@ -3,21 +3,26 @@ export const siteConfig = {
   siteName: 'Yogev Portfolio',
   siteUrl: typeof window !== 'undefined' ? window.location.origin : '',
   author: 'Yogev',
-  description: 'Professional portfolio of Yogev, a passionate full-stack developer specializing in modern web technologies, React, Node.js, and innovative software solutions.',
+  description: 'Professional portfolio of Yogev, a software engineer specializing in AI & Machine Learning, LLMs, RAG systems, Python development, and game development with Godot Engine.',
   keywords: [
     'Yogev',
-    'Full Stack Developer',
-    'React Developer',
-    'Node.js',
-    'JavaScript',
+    'Software Engineer',
+    'AI Developer',
+    'Machine Learning',
+    'LLMs',
+    'Large Language Models',
+    'RAG',
+    'Retrieval-Augmented Generation',
     'Python',
     'GDScript',
-    'Web Development',
-    'Software Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'Portfolio',
-    'Modern Web Technologies'
+    'Godot Engine',
+    'Game Development',
+    'Agent Architecture',
+    'Embeddings',
+    'Data Structures',
+    'Algorithms',
+    'Computer Science',
+    'Portfolio'
   ],
   image: '/logo.png',
   twitterHandle: '@yogev',
@@ -28,7 +33,7 @@ export const siteConfig = {
 // Page-specific SEO data
 export const pageConfigs = {
   home: {
-    title: `${siteConfig.author} - Full Stack Developer Portfolio`,
+    title: `${siteConfig.author} - Software Engineer Portfolio`,
     description: siteConfig.description,
     keywords: siteConfig.keywords.join(', '),
     type: 'website',
@@ -36,15 +41,15 @@ export const pageConfigs = {
   },
   skills: {
     title: `Skills & Technologies - ${siteConfig.author}`,
-    description: 'Explore my technical skills and expertise in modern web development technologies, frameworks, and tools.',
-    keywords: 'Python, GDScript, Node.js, React, JavaScript, HTML, CSS, Git, CI/CD',
+    description: 'Explore my technical skills in AI & Machine Learning, LLMs, RAG systems, Python, game development, and computer science fundamentals.',
+    keywords: 'Python, AI, Machine Learning, LLMs, RAG, Embeddings, GDScript, Godot Engine, Data Structures, Algorithms, Git, CI/CD',
     type: 'website',
     url: '#skills'
   },
   projects: {
     title: `Projects & Work - ${siteConfig.author}`,
-    description: 'Browse through my portfolio of web development projects, showcasing modern technologies and innovative solutions.',
-    keywords: 'Web Projects, React Applications, Full Stack Projects, Portfolio',
+    description: 'Browse through my portfolio of AI/ML projects, game development, and software engineering solutions.',
+    keywords: 'AI Projects, Machine Learning, Game Development, Python Projects, Godot Engine, Software Engineering, Portfolio',
     type: 'website',
     url: '#projects'
   },

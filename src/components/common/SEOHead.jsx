@@ -1,8 +1,8 @@
 
 const SEOHead = ({
-  title = 'Yogev - Full Stack Developer Portfolio',
-  description = 'Professional portfolio of Yogev, a passionate full-stack developer specializing in modern web technologies, React, Node.js, and innovative software solutions.',
-  keywords = 'Yogev, Full Stack Developer, React, Node.js, JavaScript, Web Development, Software Engineer, Portfolio',
+  title = 'Yogev - Software Engineer Portfolio',
+  description = 'Professional portfolio of Yogev, a software engineer specializing in AI & Machine Learning, LLMs, RAG systems, Python development, and game development with Godot Engine.',
+  keywords = 'Yogev, Software Engineer, AI Developer, Machine Learning, LLMs, RAG, Python, GDScript, Godot Engine, Game Development, Portfolio',
   image = '/logo.png',
   url = '',
   type = 'website',
@@ -26,7 +26,7 @@ const SEOHead = ({
     "@type": type === 'article' ? 'Article' : 'Person',
     ...(type === 'website' ? {
       name: author,
-      jobTitle: 'Full Stack Developer',
+      jobTitle: 'Software Engineer',
       url: fullUrl,
       image: fullImageUrl,
       sameAs: [
@@ -39,12 +39,16 @@ const SEOHead = ({
         name: "Independent"
       },
       knowsAbout: [
-        'JavaScript',
-        'React',
-        'Node.js',
-        'TypeScript',
-        'Full Stack Development',
-        'Web Development',
+        'Artificial Intelligence',
+        'Machine Learning',
+        'Large Language Models',
+        'RAG Systems',
+        'Python',
+        'GDScript',
+        'Game Development',
+        'Godot Engine',
+        'Data Structures',
+        'Algorithms',
         'Software Engineering'
       ]
     } : {

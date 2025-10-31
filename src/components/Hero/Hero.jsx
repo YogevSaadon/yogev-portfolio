@@ -23,7 +23,7 @@ const Hero = () => {
             <div className={styles.imageWrapper}>
               <img 
                 src={profileImage} 
-                alt="Yogev Saadon - Full Stack Developer"
+                alt="Yogev Saadon - Software Engineer"
                 className={styles.profileImage}
                 width="400"
                 height="400"

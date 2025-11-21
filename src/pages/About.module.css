@@ -1,0 +1,230 @@
+.aboutPage {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: var(--spacing-2xl);
+  background: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl) 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Opening Section */
+.opening {
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-2xl);
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.openingText {
+  font-size: 1.375rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.openingText:last-child {
+  margin-bottom: 0;
+}
+
+/* Hobbies Section */
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.hobbyRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hobbyRow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Left Layout */
+.imageLeft {
+  grid-template-areas: "image content";
+}
+
+.imageLeft .hobbyImage {
+  grid-area: image;
+}
+
+.imageLeft .hobbyContent {
+  grid-area: content;
+}
+
+/* Image Right Layout */
+.imageRight {
+  grid-template-areas: "content image";
+}
+
+.imageRight .hobbyImage {
+  grid-area: image;
+}
+
+.imageRight .hobbyContent {
+  grid-area: content;
+}
+
+.hobbyImage {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hobbyContent {
+  padding: var(--spacing-md);
+}
+
+.hobbyTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: var(--spacing-sm);
+}
+
+.hobbyText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .title {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .opening {
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hobbyRow {
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hobbyRow:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .hobbyTitle {
+  color: #40E0D0;
+  border-bottom-color: #40E0D0;
+}
+
+[data-theme="dark"] .imagePlaceholder {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .aboutPage {
+    padding-top: 60px;
+  }
+
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .opening {
+    padding: var(--spacing-md);
+  }
+
+  .openingText {
+    font-size: 1rem;
+  }
+
+  /* Stack vertically on mobile */
+  .hobbyRow,
+  .imageLeft,
+  .imageRight {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content";
+    gap: var(--spacing-md);
+  }
+
+  .hobbyImage {
+    min-height: 300px;
+  }
+
+  .imagePlaceholder {
+    min-height: 300px;
+  }
+
+  .hobbyTitle {
+    font-size: 1.5rem;
+  }
+
+  .hobbyText {
+    font-size: 1rem;
+  }
+
+  .hobbyContent {
+    padding: 0;
+  }
+}

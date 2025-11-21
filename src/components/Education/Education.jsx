@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import styles from './Education.module.css';
 
 const Education = () => {
+  const navigate = useNavigate();
   const educationData = [
     {
-      period: "2021 - 2025",
+      period: "2021 - 2026",
       degree: "Bachelor of Science in Computer Science",
       institution: "The Open University of Israel",
       description: "Pursuing a comprehensive degree in Computer Science with focus on software engineering, algorithms, and data structures.",
@@ -24,9 +27,16 @@ const Education = () => {
         <div className={styles.header}>
           <h2 className={styles.title}>Education & Learning</h2>
           <p className={styles.subtitle}>
-            My educational journey and continuous learning experiences that have shaped my 
+            My educational journey and continuous learning experiences that have shaped my
             expertise in computer science and software development.
           </p>
+          <button
+            onClick={() => navigate('/academic')}
+            className={styles.academicLink}
+            aria-label="View detailed academic progress"
+          >
+            View Detailed Academic Progress <ArrowRight size={18} />
+          </button>
         </div>
 
         <div className={styles.timeline}>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, ArrowLeft } from 'lucide-react';
 import ThemeToggle from '../common/ThemeToggle';
 import { useScrollAnimation } from '../../hooks/useAnimations';
 import { useMobile } from '../../hooks/useMobile';
@@ -10,25 +11,31 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
+
   const { shouldShowMobileNav } = useMobile();
   const [headerRef] = useScrollAnimation({ animationClass: 'animate-fade-in' });
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
-      const sections = ['hero', 'skills', 'projects', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+
+      // Only update active section on home page
+      if (isHomePage) {
+        const sections = ['hero', 'skills', 'projects', 'education', 'contact'];
+        const scrollPosition = window.scrollY + 100;
+
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -36,9 +43,9 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Call once to set initial state
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   // Close mobile menu when clicking outside or pressing Escape
   useKeyboardNavigation({
@@ -73,30 +80,74 @@ const Header = () => {
     { id: 'contact', label: 'Contact' }
   ];
 
+  const pageLinks = [
+    { path: '/about', label: 'About Me' },
+    { path: '/academic', label: 'Grades' }
+  ];
+
+  const getPageTitle = () => {
+    if (location.pathname === '/about') return 'About Me';
+    if (location.pathname === '/academic') return 'Academic Progress';
+    return '';
+  };
+
   return (
-    <header 
+    <header
       ref={headerRef}
       className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}
       role="banner"
     >
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <span className={styles.name}>Yogev Saadon</span>
-        </div>
-        
-        {/* Desktop Navigation */}
-        <nav className={styles.nav} role="navigation" aria-label="Main navigation">
-          {navItems.map((item) => (
+        {!isHomePage ? (
+          // Sub-page header with back button
+          <>
             <button
-              key={item.id}
-              className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
-              onClick={() => scrollToSection(item.id)}
-              aria-current={activeSection === item.id ? 'page' : undefined}
+              onClick={() => navigate('/')}
+              className={styles.backButton}
+              aria-label="Back to home"
             >
-              {item.label}
+              <ArrowLeft size={20} />
+              <span>Back</span>
             </button>
-          ))}
-        </nav>
+            <div className={styles.pageTitle}>
+              {getPageTitle()}
+            </div>
+          </>
+        ) : (
+          // Home page header
+          <>
+            <div className={styles.logo}>
+              <span className={styles.name}>Yogev Saadon</span>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className={styles.nav} role="navigation" aria-label="Main navigation">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
+                  onClick={() => scrollToSection(item.id)}
+                  aria-current={activeSection === item.id ? 'page' : undefined}
+                >
+                  {item.label}
+                </button>
+              ))}
+
+              <div className={styles.navDivider}></div>
+
+              {pageLinks.map((link) => (
+                <button
+                  key={link.path}
+                  className={styles.pageLink}
+                  onClick={() => navigate(link.path)}
+                  aria-label={`Navigate to ${link.label}`}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
+          </>
+        )}
 
         {/* Theme Toggle & Mobile Menu */}
         <div className={styles.headerActions}>
@@ -118,10 +169,10 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {shouldShowMobileNav() && (
-          <nav 
+        {shouldShowMobileNav() && isHomePage && (
+          <nav
             className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ''}`}
-            role="navigation" 
+            role="navigation"
             aria-label="Mobile navigation"
           >
             <div className={styles.mobileNavContent}>

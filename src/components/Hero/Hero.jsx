@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Hero.module.css';
 import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.container}>
@@ -20,9 +23,21 @@ const Hero = () => {
           </div>
           
           <div className={styles.imageContainer}>
-            <div className={styles.imageWrapper}>
-              <img 
-                src={profileImage} 
+            <div
+              className={styles.imageWrapper}
+              onClick={() => navigate('/about')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigate('/about');
+                }
+              }}
+              aria-label="Click to learn more about me"
+            >
+              <img
+                src={profileImage}
                 alt="Yogev Saadon - Software Engineer"
                 className={styles.profileImage}
                 width="400"

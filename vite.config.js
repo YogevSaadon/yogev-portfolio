@@ -5,6 +5,9 @@ import path from "path";
 const config = {
   base: "/yogev-portfolio/",
   mode: "development",
+  server: {
+    port: 5174,
+  },
   build: {
     outDir: "dist",
     emptyOutDir: true,

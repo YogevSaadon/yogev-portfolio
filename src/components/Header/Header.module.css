@@ -48,6 +48,66 @@
   background-clip: text;
 }
 
+/* Back button for sub-pages */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.backButton:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.backButton::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.backButton:hover::after {
+  width: 100%;
+}
+
+.backButton svg {
+  transition: transform 0.3s ease;
+}
+
+.backButton:hover svg {
+  transform: translateX(-4px);
+}
+
+/* Page title for sub-pages */
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  flex: 1;
+  text-align: center;
+  margin-right: auto;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Light mode: keep orange gradient */
 [data-theme="light"] .name {
   background: linear-gradient(135deg, #D2691E, #CD853F);
@@ -64,6 +124,25 @@
   background-clip: text;
 }
 
+[data-theme="dark"] .pageTitle {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .backButton {
+  color: #9CA3AF;
+}
+
+[data-theme="dark"] .backButton:hover {
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .backButton::after {
+  background: linear-gradient(135deg, #40E0D0, #0080FF);
+}
+
 /* Dark mode navigation fixes */
 [data-theme="dark"] .navLink {
   color: #9CA3AF !important;
@@ -75,6 +154,18 @@
 
 [data-theme="dark"] .navLink::after {
   background: linear-gradient(135deg, #40E0D0, #0080FF) !important;
+}
+
+[data-theme="dark"] .navDivider {
+  background: #9CA3AF;
+}
+
+[data-theme="dark"] .pageLink {
+  color: #9CA3AF;
+}
+
+[data-theme="dark"] .pageLink:hover {
+  color: #40E0D0;
 }
 
 /* Dark mode mobile menu fixes */
@@ -127,6 +218,35 @@
 
 .navLink:hover::after {
   width: 100%;
+}
+
+/* Navigation divider */
+.navDivider {
+  width: 1px;
+  height: 24px;
+  background: var(--color-text-secondary);
+  opacity: 0.3;
+  margin: 0 var(--spacing-sm);
+}
+
+/* Page links (smaller, secondary style) */
+.pageLink {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.pageLink:hover {
+  color: var(--primary);
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .themeToggle {

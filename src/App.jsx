@@ -1,12 +1,12 @@
-import { Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import Layout from './components/layout/Layout';
-import SEOHead from './components/common/SEOHead';
 import NetworkStatus from './components/common/NetworkStatus';
-import LoadingSpinner from './components/common/LoadingSpinner';
 import { ThemeProvider } from './context/ThemeContext';
-import { LazyHero, LazySkills, LazyProjects, LazyEducation, LazyContact, preloadCriticalComponents } from './utils/lazyComponents.jsx';
-import { pageConfigs } from './utils/seo';
+import Home from './pages/Home';
+import About from './pages/About';
+import Academic from './pages/Academic';
 import performanceMonitor from './utils/performance';
 import './styles/variables.css';
 import './styles/base.css';
@@ -19,10 +19,7 @@ function App() {
   useEffect(() => {
     // Mark app start for performance monitoring
     performanceMonitor.mark('app-start');
-    
-    // Preload critical components
-    preloadCriticalComponents();
-    
+
     // Mark app ready
     setTimeout(() => {
       performanceMonitor.mark('app-ready');
@@ -32,59 +29,24 @@ function App() {
 
   return (
     <ThemeProvider>
-      <ErrorBoundary>
-        <div className="App" data-theme="system">
-          <SEOHead {...pageConfigs.home} />
-          
-          <Layout>
-            <Suspense fallback={
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
-                <LoadingSpinner size="large" text="Loading portfolio..." />
-              </div>
-            }>
-              <LazyHero />
-            </Suspense>
+      <Router>
+        <ErrorBoundary>
+          <div className="App" data-theme="system">
+            <Routes>
+              <Route path="/" element={<Layout><Home /></Layout>} />
+              <Route path="/about" element={<Layout><About /></Layout>} />
+              <Route path="/academic" element={<Layout><Academic /></Layout>} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
 
-            <Suspense fallback={
-              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                <LoadingSpinner text="Loading skills..." />
-              </div>
-            }>
-              <LazySkills />
-            </Suspense>
-
-            <Suspense fallback={
-              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                <LoadingSpinner text="Loading projects..." />
-              </div>
-            }>
-              <LazyProjects />
-            </Suspense>
-
-            <Suspense fallback={
-              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                <LoadingSpinner text="Loading education..." />
-              </div>
-            }>
-              <LazyEducation />
-            </Suspense>
-
-            <Suspense fallback={
-              <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                <LoadingSpinner text="Loading contact form..." />
-              </div>
-            }>
-              <LazyContact />
-            </Suspense>
-          </Layout>
-
-          <NetworkStatus 
-            showConnectionInfo={import.meta.env.DEV}
-            position="top"
-            autoHide={true}
-          />
-        </div>
-      </ErrorBoundary>
+            <NetworkStatus
+              showConnectionInfo={import.meta.env.DEV}
+              position="top"
+              autoHide={true}
+            />
+          </div>
+        </ErrorBoundary>
+      </Router>
     </ThemeProvider>
   );
 }

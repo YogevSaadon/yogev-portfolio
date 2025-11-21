@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import SEOHead from '../components/common/SEOHead';
 import styles from './About.module.css';
+import chessImage from '../assets/about/Chess_Image.png';
+import watchmakingImage from '../assets/about/Watchmaking_Image.jpg';
+import sportsImage from '../assets/about/Sports_Image.png';
 
 const About = () => {
   useEffect(() => {
@@ -20,13 +23,7 @@ const About = () => {
           {/* Opening Paragraph */}
           <section className={styles.opening}>
             <p className={styles.openingText}>
-              As the son of a programmer and a mother with a Ph.D. in mathematics, I was always surrounded by analytical thinking and problem-solving. But my path into development wasn't a straight line.
-            </p>
-            <p className={styles.openingText}>
-              It started in mechanical engineering and included several sharp turns that required me to re-evaluate and build myself from scratch. It was there, outside the defined path, that I discovered my true passion when I tried to build a game from the ground up. I realized that the technical challenge, the creativity, and the ability to turn a complex idea into something that works—that's what drives me.
-            </p>
-            <p className={styles.openingText}>
-              This journey taught me the importance of grit, patience, and, most importantly, how to learn from mistakes. Today, I bring all of that experience into my computer science studies and the AI projects I'm building.
+              I didn't start my path in computer science. I explored mechanical engineering at first, changed directions a couple of times, and gradually realized that building things through code is what I enjoy most. The process of creating something from scratch and watching it come together is what pulled me deeper into development. Since then, I've been learning, experimenting, and improving through real projects, and today I focus on computer science, development, and AI.
             </p>
           </section>
 
@@ -35,14 +32,16 @@ const About = () => {
             {/* Chess - Image Left, Text Right */}
             <div className={`${styles.hobbyRow} ${styles.imageLeft}`}>
               <div className={styles.hobbyImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Chess Image</span>
-                </div>
+                <img
+                  src={chessImage}
+                  alt="Chess board and pieces"
+                  className={styles.hobbyImageImg}
+                />
               </div>
               <div className={styles.hobbyContent}>
-                <h2 className={styles.hobbyTitle}>Chess: The Art of Foresight</h2>
+                <h2 className={styles.hobbyTitle}>Chess</h2>
                 <p className={styles.hobbyText}>
-                  Chess has been a part of my life since I was young. It's more than a game; it's a training ground for strategic thinking, planning several moves ahead, and pattern recognition. I find a direct parallel between breaking down a complex problem on the board and tackling algorithmic challenges in code. In both fields, every move must be precise and intentional.
+                  Chess has been part of my life since I was young. What I enjoy most is the mental clarity it gives me, holding a few ideas in my head at once, looking at different possibilities, and keeping track of several things without losing the thread. It's simple, but it stayed with me over the years.
                 </p>
               </div>
             </div>
@@ -50,29 +49,33 @@ const About = () => {
             {/* Watchmaking - Text Left, Image Right */}
             <div className={`${styles.hobbyRow} ${styles.imageRight}`}>
               <div className={styles.hobbyContent}>
-                <h2 className={styles.hobbyTitle}>Watchmaking: Patience in Practice</h2>
+                <h2 className={styles.hobbyTitle}>Watchmaking</h2>
                 <p className={styles.hobbyText}>
-                  One of my more surprising hobbies is watchmaking. What began as a frustrating challenge evolved into a profound lesson in patience, grit, and precision. It feels remarkably similar to programming: you can spend an entire day on a single problem, making zero progress and feeling completely stuck. Then, you'll watch one video or read one line of documentation, something clicks, and the entire mechanism suddenly works. That same cycle of intense frustration followed by the rewarding 'click' of a working system is something I find in both worlds.
+                  Watchmaking started as a random challenge and quickly became a hobby I enjoy. A lot of it is spending hours trying to fix something that refuses to work, and then suddenly one small detail clicks, usually after a short video or a diagram, and the whole thing makes sense. That mix of frustration, patience, and the little "now it works" moment is something I really like about it.
                 </p>
               </div>
               <div className={styles.hobbyImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Watchmaking Image</span>
-                </div>
+                <img
+                  src={watchmakingImage}
+                  alt="Watch mechanism and tools"
+                  className={styles.hobbyImageImg}
+                />
               </div>
             </div>
 
             {/* Sports - Image Left, Text Right */}
             <div className={`${styles.hobbyRow} ${styles.imageLeft}`}>
               <div className={styles.hobbyImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Sports Image</span>
-                </div>
+                <img
+                  src={sportsImage}
+                  alt="Sports training equipment"
+                  className={styles.hobbyImageImg}
+                />
               </div>
               <div className={styles.hobbyContent}>
-                <h2 className={styles.hobbyTitle}>An Athlete's Mentality</h2>
+                <h2 className={styles.hobbyTitle}>Training & Sports</h2>
                 <p className={styles.hobbyText}>
-                  As someone who has competed in Judo, trained in MMA, and played rugby, contact sports have profoundly shaped my mentality. I believe in hard, continuous work, daily self-improvement, and embracing the challenge. The discipline of training, proper nutrition, and good sleep isn't just for a healthy lifestyle; it's my foundation for meeting complex goals, both in my projects and in my studies.
+                  Sports have always been a steady part of my life. I trained in judo, spent time in MMA, and later played rugby. What I take from it isn't competition as much as the routine itself, showing up, staying disciplined, and trying to improve a little bit every day. It's something that stayed with me and shapes how I approach challenges in general.
                 </p>
               </div>
             </div>
@@ -80,9 +83,9 @@ const About = () => {
             {/* Game Dev - Text Left, Image Right */}
             <div className={`${styles.hobbyRow} ${styles.imageRight}`}>
               <div className={styles.hobbyContent}>
-                <h2 className={styles.hobbyTitle}>Fantasy and World-Building</h2>
+                <h2 className={styles.hobbyTitle}>Game Development</h2>
                 <p className={styles.hobbyText}>
-                  I've always had a love for games and fantasy worlds. In recent years, rather than just consuming them, I've focused on building them. For me, game development is the perfect intersection of the technical (code, logic) and the creative (story, design). The demo I recently completed is a constant reminder that the tools we have today allow us to build any world we can imagine.
+                  I've always enjoyed games and the imagination behind them, and over time I moved from just playing to actually trying to build my own ideas. Game development sits in a place I like, combining technical work with a bit of creativity. I recently finished a small demo, and it reminded me how much I enjoy creating something from scratch and watching it take shape.
                 </p>
               </div>
               <div className={styles.hobbyImage}>

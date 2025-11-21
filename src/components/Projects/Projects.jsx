@@ -3,6 +3,8 @@ import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
 import projectOneImage from '../../assets/projects/projectOne.png';
 import projectTwoImage from '../../assets/projects/ProjectTwo.png';
+import projectThreeImage from '../../assets/projects/ProjectThree.png';
+import projectFourImage from '../../assets/projects/ProjectFour.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -23,9 +25,38 @@ const Projects = () => {
       ]
     },
     {
+      title: "Shadow AI",
+      description: "R&D project researching and developing improved architectures for AI coding agents working in multi-file codebases. Focused on reliability, smarter context selection, and safer automated code edits with local models.",
+      image: projectTwoImage,
+      imageAlt: "Shadow AI - AI coding agent research project",
+      technologies: ["Python", "Ollama (local LLMs)", "Claude Code", "Cursor", "AI coding agents", "Git", "GitHub"],
+      githubUrl: "https://github.com/YogevSaadon/Shadow-Public-R-D/blob/main/Theory.md",
+      demoUrl: "https://github.com/YogevSaadon/Shadow-Public-R-D/blob/main/MVPs.md",
+      linkLabels: { code: "Theory", demo: "MVP" },
+      learnings: [
+        "Researched AI agent architectures for multi-file codebases",
+        "Developed smarter context selection mechanisms",
+        "Implemented safer automated code editing with local models"
+      ]
+    },
+    {
+      title: "Qude",
+      description: "A real-time queue system enabling instant QR-code onboarding. Provides live position updates directly to mobile browsers; no app required. Built on modern architecture optimized for a seamless user experience.",
+      image: projectThreeImage,
+      imageAlt: "Qude queue management system interface",
+      technologies: ["Python", "Docker", "Flask", "SQL", "REST API", "Full Stack", "React"],
+      githubUrl: "https://github.com/YogevSaadon/Qode",
+      demoUrl: "https://github.com/YogevSaadon/Qode",
+      learnings: [
+        "Built real-time queue management with live updates",
+        "Implemented QR code scanning for instant onboarding",
+        "Designed Full Stack architecture for seamless UX"
+      ]
+    },
+    {
       title: "Portfolio Website",
       description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: projectTwoImage,
+      image: projectFourImage,
       imageAlt: "Yogev Saadon portfolio website logo",
       technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
       githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",
@@ -81,7 +112,7 @@ const Projects = () => {
                 />
                 <div className={styles.imageOverlay}>
                   <div className={styles.projectLinks}>
-                    <a 
+                    <a
                       href={projects[currentProject].githubUrl}
                       className={styles.projectLink}
                       target="_blank"
@@ -89,9 +120,9 @@ const Projects = () => {
                       aria-label="View GitHub repository"
                     >
                       <Share2 size={20} />
-                      <span>Code</span>
+                      <span>{projects[currentProject].linkLabels?.code || "Code"}</span>
                     </a>
-                    <a 
+                    <a
                       href={projects[currentProject].demoUrl}
                       className={styles.projectLink}
                       target="_blank"
@@ -99,7 +130,7 @@ const Projects = () => {
                       aria-label="View live demo"
                     >
                       <ExternalLink size={20} />
-                      <span>Demo</span>
+                      <span>{projects[currentProject].linkLabels?.demo || "Demo"}</span>
                     </a>
                   </div>
                 </div>

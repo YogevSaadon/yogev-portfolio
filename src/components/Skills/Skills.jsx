@@ -3,24 +3,47 @@ import styles from './Skills.module.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Languages",
       skills: [
         "Python",
         "GDScript",
         "Java",
-        "C#"
+        "C#",
+        "SQL",
+        "JavaScript/React"
       ]
     },
     {
-      title: "AI & Machine Learning",
+      title: "AI & Agents",
       skills: [
-        "LLMs (Large Language Models)",
-        "RAG (Retrieval-Augmented Generation)",
-        "Embeddings",
-        "MCP (Model Context Protocol)",
+        "LLM Integration (Ollama, Claude)",
         "Agent Architecture",
-        "Graph Optimization",
-        "Semantic Search"
+        "Prompt Engineering"
+      ]
+    },
+    {
+      title: "Backend/DevOps",
+      skills: [
+        "FastAPI",
+        "WebSockets",
+        "Docker",
+        "SQLite",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      title: "Game & Performance",
+      skills: [
+        "Real-time Systems",
+        "Performance Optimization",
+        "Math-based Algorithms"
+      ]
+    },
+    {
+      title: "AI Workflow",
+      skills: [
+        "Expert in Accelerated Development using Claude Code"
       ]
     },
     {
@@ -29,41 +52,8 @@ const Skills = () => {
         "Data Structures",
         "Algorithms",
         "OOP (Object-Oriented Programming)",
-        "Performance Optimization",
         "Memory Management",
         "Complexity Analysis"
-      ]
-    },
-    {
-      title: "Game Development & Systems",
-      skills: [
-        "Godot Engine",
-        "Real-time Systems",
-        "Component Architecture",
-        "Signal-based Communication",
-        "Math-driven AI",
-        "Performance Profiling"
-      ]
-    },
-    {
-      title: "Development Tools & Practices",
-      skills: [
-        "Git",
-        "GitHub",
-        "GitHub Actions (CI/CD)",
-        "JSON Data Design",
-        "AST Analysis (LibCST)",
-        "Code Architecture"
-      ]
-    },
-    {
-      title: "Soft Skills & Work Style",
-      skills: [
-        "Independent Work",
-        "Team Collaboration",
-        "Problem Solving",
-        "Technical Documentation",
-        "Self-Learning"
       ]
     }
   ];

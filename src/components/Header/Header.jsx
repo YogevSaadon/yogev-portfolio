@@ -82,7 +82,7 @@ const Header = () => {
 
   const pageLinks = [
     { path: '/about', label: 'About Me' },
-    { path: '/academic', label: 'Grades' }
+    { path: '/academic', label: 'Grades (WIP)', disabled: true }
   ];
 
   const getPageTitle = () => {
@@ -139,8 +139,10 @@ const Header = () => {
                 <button
                   key={link.path}
                   className={styles.pageLink}
-                  onClick={() => navigate(link.path)}
+                  onClick={() => !link.disabled && navigate(link.path)}
                   aria-label={`Navigate to ${link.label}`}
+                  disabled={link.disabled}
+                  style={link.disabled ? { opacity: 0.5, cursor: 'not-allowed' } : {}}
                 >
                   {link.label}
                 </button>

@@ -4,6 +4,7 @@ import styles from './About.module.css';
 import chessImage from '../assets/about/Chess_Image.png';
 import watchmakingImage from '../assets/about/Watchmaking_Image.jpg';
 import sportsImage from '../assets/about/Sports_Image.png';
+import gameDevImage from '../assets/about/Temo-image.png';
 
 const About = () => {
   useEffect(() => {
@@ -89,9 +90,11 @@ const About = () => {
                 </p>
               </div>
               <div className={styles.hobbyImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Game Dev Image</span>
-                </div>
+                <img
+                  src={gameDevImage}
+                  alt="Game development workspace"
+                  className={styles.hobbyImageImg}
+                />
               </div>
             </div>
           </section>

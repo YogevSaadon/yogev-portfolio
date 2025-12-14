@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import SEOHead from '../components/common/SEOHead';
 import styles from './About.module.css';
-import chessImage from '../assets/about/Chess_Image.png';
+import chessImage from '../assets/about/Chess_Image.webp';
 import watchmakingImage from '../assets/about/Watchmaking_Image.jpg';
 import sportsImage from '../assets/about/Sports_Image.png';
-import gameDevImage from '../assets/about/Temo-image.png';
+import gameDevImage from '../assets/about/Temo-image.webp';
 
 const About = () => {
   useEffect(() => {

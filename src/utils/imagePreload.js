@@ -1,59 +1,60 @@
-// Image preloading utilities - preload ALL site images at startup
-
-// About page images
-import chessImage from '../assets/about/Chess_Image.png';
-import watchmakingImage from '../assets/about/Watchmaking_Image.jpg';
-import sportsImage from '../assets/about/Sports_Image.png';
-import gameDevImage from '../assets/about/Temo-image.png';
+// Image preloading utilities - staggered loading for better performance
 
 // Project images
-import projectOneImage from '../assets/projects/projectOne.png';
-import projectTwoImage from '../assets/projects/ProjectTwo.png';
-import projectThreeImage from '../assets/projects/ProjectThree.png';
-import projectFourImage from '../assets/projects/ProjectFour.png';
+import projectOneImage from '../assets/projects/ProjectOne.jpg';
+import projectTwoImage from '../assets/projects/ProjectTwo.webp';
+import projectThreeImage from '../assets/projects/ProjectThree.webp';
+import projectFourImage from '../assets/projects/ProjectFour.webp';
 
-// Hero image
-import profileImage from '../assets/profile.jpg';
+// About page images
+import chessImage from '../assets/about/Chess_Image.webp';
+import watchmakingImage from '../assets/about/Watchmaking_Image.jpg';
+import sportsImage from '../assets/about/Sports_Image.png';
+import gameDevImage from '../assets/about/Temo-image.webp';
 
-const allImages = [
-  // About
-  chessImage,
-  watchmakingImage,
-  sportsImage,
-  gameDevImage,
-  // Projects
+const projectImages = [
   projectOneImage,
   projectTwoImage,
   projectThreeImage,
   projectFourImage,
-  // Hero
-  profileImage,
 ];
 
-let imagesPreloaded = false;
+const aboutImages = [
+  chessImage,
+  watchmakingImage,
+  sportsImage,
+  gameDevImage,
+];
 
-export const preloadAllImages = () => {
-  if (imagesPreloaded) return;
+let projectsPreloaded = false;
+let aboutPreloaded = false;
 
-  allImages.forEach((src) => {
+const preloadImageArray = (images) => {
+  images.forEach((src) => {
     const img = new Image();
     img.src = src;
   });
-
-  imagesPreloaded = true;
 };
 
-// Preload on idle (after initial render)
+// Preload project images (called ~1s after page load)
+export const preloadProjectImages = () => {
+  if (projectsPreloaded) return;
+  preloadImageArray(projectImages);
+  projectsPreloaded = true;
+};
+
+// Preload about images (called ~2s after page load)
+export const preloadAboutImages = () => {
+  if (aboutPreloaded) return;
+  preloadImageArray(aboutImages);
+  aboutPreloaded = true;
+};
+
+// Staggered preload - doesn't block initial render
 export const preloadImagesOnIdle = () => {
-  if (imagesPreloaded) return;
+  // Project images after 1 second
+  setTimeout(preloadProjectImages, 1000);
 
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => preloadAllImages(), { timeout: 2000 });
-  } else {
-    // Fallback for Safari
-    setTimeout(preloadAllImages, 1000);
-  }
+  // About images after 2.5 seconds
+  setTimeout(preloadAboutImages, 2500);
 };
-
-// Legacy export for backwards compatibility
-export const preloadAboutImages = preloadAllImages;

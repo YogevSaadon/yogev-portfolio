@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { ExternalLink, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
-import projectOneImage from '../../assets/projects/projectOne.png';
-import projectTwoImage from '../../assets/projects/ProjectTwo.png';
-import projectThreeImage from '../../assets/projects/ProjectThree.png';
-import projectFourImage from '../../assets/projects/ProjectFour.png';
+import projectOneImage from '../../assets/projects/ProjectOne.jpg';
+import projectTwoImage from '../../assets/projects/ProjectTwo.webp';
+import projectThreeImage from '../../assets/projects/ProjectThree.webp';
+import projectFourImage from '../../assets/projects/ProjectFour.webp';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);

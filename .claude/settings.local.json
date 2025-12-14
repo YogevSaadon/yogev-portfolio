@@ -22,7 +22,10 @@
       "Bash(powershell:*)",
       "Bash(npm run preview:*)",
       "WebFetch(domain:yogevsaadon.github.io)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(dir /s \"c:\\Projects\\yogev-portfolio\\src\\assets\\*.png\" \"c:\\Projects\\yogev-portfolio\\src\\assets\\*.jpg\")",
+      "Bash(cmd /c \"dir /s c:\\Projects\\yogev-portfolio\\src\\assets\\*.png c:\\Projects\\yogev-portfolio\\src\\assets\\*.jpg\")",
+      "Bash(cmd /c \"dir /s c:\\Projects\\yogev-portfolio\\src\\assets\")"
     ],
     "deny": [],
     "ask": [],

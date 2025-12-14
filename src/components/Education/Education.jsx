@@ -9,7 +9,7 @@ const Education = () => {
       period: "2021 - 2026",
       degree: "Bachelor of Science in Computer Science",
       institution: "The Open University of Israel",
-      description: "Pursuing a comprehensive degree in Computer Science with focus on software engineering, algorithms, and data structures.",
+      description: "B.Sc. in Computer Science (in progress), with focus on software engineering, algorithms, and data structures.",
       skills: ["Data Structures & Algorithms", "Software Engineering"]
     },
     {

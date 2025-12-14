@@ -15,10 +15,10 @@ const Hero = () => {
               <span className={styles.name}>Yogev Saadon</span>
             </h1>
             <p className={styles.subtitle}>
-              Software Engineer | Computer Science
+              Software Engineer | Systems & AI Projects
             </p>
             <p className={styles.description}>
-              I work on projects in development and AI, with a focus on understanding how systems behave and how to build things that actually work. I enjoy writing code, solving problems, and learning through hands-on experimentation. These days I'm mainly involved in computer science studies and building practical AI-driven projects.
+              I work on software systems with a focus on structure, performance, and reliability. My projects span real-time simulations, AI-driven tools, and backend infrastructure. I'm drawn to how systems behave under complexity—where they fail, where they hold—and how to build them to be consistent and predictable. Alongside my computer science studies, I explore system design, performance tuning, and applied AI through hands-on work.
             </p>
           </div>
           

@@ -24,7 +24,7 @@ const About = () => {
           {/* Opening Paragraph */}
           <section className={styles.opening}>
             <p className={styles.openingText}>
-              I didn't start my path in computer science. I explored mechanical engineering at first, changed directions a couple of times, and gradually realized that building things through code is what I enjoy most. The process of creating something from scratch and watching it come together is what pulled me deeper into development. Since then, I've been learning, experimenting, and improving through real projects, and today I focus on computer science, development, and AI.
+              I enjoy building software systems and understanding how they behave as complexity increases. My background includes formal study in computer science and independent work in game development, AI agents, and backend systems. I tend to learn by building, testing, and refining things until they break less.
             </p>
           </section>
 

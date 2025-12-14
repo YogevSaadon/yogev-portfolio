@@ -64,7 +64,7 @@ const Contact = () => {
                 </a>
               </div>
               <p className={styles.availability}>
-                Available for new opportunities and exciting collaborations.
+                Open to discussing projects, ideas, and technical challenges.
               </p>
             </div>
           </div>

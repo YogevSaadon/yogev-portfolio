@@ -82,7 +82,7 @@ const Header = () => {
 
   const pageLinks = [
     { path: '/about', label: 'About Me' },
-    { path: '/academic', label: 'Grades (WIP)', disabled: true }
+    { path: '/academic', label: 'Grades' }
   ];
 
   const getPageTitle = () => {

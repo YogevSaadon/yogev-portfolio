@@ -26,7 +26,7 @@ const Projects = () => {
     },
     {
       title: "Shadow AI",
-      description: "R&D project researching and developing improved architectures for AI coding agents working in multi-file codebases. Focused on reliability, smarter context selection, and safer automated code edits with local models.",
+      description: "An experimental project exploring architectures for AI coding agents in multi-file codebases. Focused on reliability, context selection, and safer automated edits using local models.",
       image: projectTwoImage,
       imageAlt: "Shadow AI - AI coding agent research project",
       technologies: ["Python", "Ollama (local LLMs)", "Claude Code", "Cursor", "AI coding agents", "Git", "GitHub"],
@@ -87,8 +87,7 @@ const Projects = () => {
         <div className={styles.header}>
           <h2 className={styles.title}>Featured Projects</h2>
           <p className={styles.subtitle}>
-            Here are some of my recent projects that showcase my skills in full-stack 
-            development, mobile applications, and data visualization.
+            Here are some recent projects focused on systems design, AI-driven software, and performance-critical applications.
           </p>
         </div>
 

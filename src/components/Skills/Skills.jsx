@@ -43,7 +43,7 @@ const Skills = () => {
     {
       title: "AI Workflow",
       skills: [
-        "Expert in Accelerated Development using Claude Code"
+        "Experience using AI-assisted development tools (Claude Code)"
       ]
     },
     {

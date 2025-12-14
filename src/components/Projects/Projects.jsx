@@ -8,6 +8,7 @@ import projectFourImage from '../../assets/projects/ProjectFour.png';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
+  const [isImageLoading, setIsImageLoading] = useState(false);
 
   const projects = [
     {
@@ -70,15 +71,22 @@ const Projects = () => {
   ];
 
   const nextProject = () => {
+    setIsImageLoading(true);
     setCurrentProject((prev) => (prev + 1) % projects.length);
   };
 
   const prevProject = () => {
+    setIsImageLoading(true);
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
   const goToProject = (index) => {
+    setIsImageLoading(true);
     setCurrentProject(index);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
   };
 
   return (
@@ -103,11 +111,18 @@ const Projects = () => {
           <div className={styles.projectCard}>
             <div className={styles.projectTop}>
               <div className={styles.projectImage}>
-                <img 
+                {isImageLoading && (
+                  <div className={styles.imageLoader}>
+                    <div className={styles.spinner}></div>
+                  </div>
+                )}
+                <img
                   src={projects[currentProject].image}
                   alt={projects[currentProject].imageAlt}
                   width="600"
                   height="400"
+                  onLoad={handleImageLoad}
+                  style={{ opacity: isImageLoading ? 0 : 1 }}
                 />
                 <div className={styles.imageOverlay}>
                   <div className={styles.projectLinks}>

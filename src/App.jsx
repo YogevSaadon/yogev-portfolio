@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Academic from './pages/Academic';
 import performanceMonitor from './utils/performance';
+import { preloadImagesOnIdle } from './utils/imagePreload';
 import './styles/variables.css';
 import './styles/base.css';
 import './styles/components.css';
@@ -19,6 +20,9 @@ function App() {
   useEffect(() => {
     // Mark app start for performance monitoring
     performanceMonitor.mark('app-start');
+
+    // Preload all images after initial render
+    preloadImagesOnIdle();
 
     // Mark app ready
     setTimeout(() => {

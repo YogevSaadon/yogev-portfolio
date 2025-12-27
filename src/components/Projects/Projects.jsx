@@ -18,7 +18,7 @@ const Projects = () => {
       imageAlt: "Void Gambit game screenshot showing bullet-hell gameplay",
       technologies: ["Godot", "GDScript", "Mathematical Optimization", "Algorithmic Performance", "System Design"],
       githubUrl: "https://github.com/YogevSaadon/void-gambit",
-      demoUrl: "https://yogevsaadon.github.io/void-gambit/",
+      demoUrl: "https://yogevsaadon.github.io/void-gambit-demo/",
       learnings: [
         "Implemented math-driven targeting systems without physics",
         "Optimized performance with staggered updates and cached queries",

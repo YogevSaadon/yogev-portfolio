@@ -6,11 +6,10 @@ const Skills = () => {
       title: "Languages",
       skills: [
         "Python",
-        "GDScript",
-        "Java",
-        "C#",
+        "JavaScript (React)",
         "SQL",
-        "JavaScript/React"
+        "Java",
+        "GDScript"
       ]
     },
     {
@@ -18,7 +17,8 @@ const Skills = () => {
       skills: [
         "LLM Integration (Ollama, Claude)",
         "Agent Architecture",
-        "Prompt Engineering"
+        "Prompt Engineering",
+        "Fine-tuning (SFT / PEFT / QLoRA)"
       ]
     },
     {
@@ -26,9 +26,16 @@ const Skills = () => {
       skills: [
         "FastAPI",
         "WebSockets",
-        "SQLite",
+        "SQLite"
+      ]
+    },
+    {
+      title: "Dev & Deployment",
+      skills: [
         "Git",
-        "GitHub"
+        "GitHub",
+        "GitHub Actions (build/deploy automation)",
+        "Docker"
       ]
     },
     {
@@ -36,7 +43,7 @@ const Skills = () => {
       skills: [
         "Real-time Systems",
         "Performance Optimization",
-        "Math-based Algorithms"
+        "Godot (GDExtension)"
       ]
     },
     {
@@ -44,8 +51,7 @@ const Skills = () => {
       skills: [
         "Data Structures",
         "Algorithms",
-        "OOP (Object-Oriented Programming)",
-        "Memory Management",
+        "OOP",
         "Complexity Analysis"
       ]
     }

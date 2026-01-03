@@ -82,12 +82,14 @@ const Header = () => {
 
   const pageLinks = [
     { path: '/about', label: 'About Me' },
-    { path: '/academic', label: 'Grades' }
+    { path: '/academic', label: 'Grades' },
+    { path: '/blog', label: 'AI Blog' }
   ];
 
   const getPageTitle = () => {
     if (location.pathname === '/about') return 'About Me';
     if (location.pathname === '/academic') return 'Academic Progress';
+    if (location.pathname === '/blog') return 'AI Blog';
     return '';
   };
 

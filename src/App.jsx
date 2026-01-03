@@ -7,6 +7,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Home from './pages/Home';
 import About from './pages/About';
 import Academic from './pages/Academic';
+import Blog from './pages/Blog';
 import performanceMonitor from './utils/performance';
 import { preloadImagesOnIdle } from './utils/imagePreload';
 import './styles/variables.css';
@@ -40,6 +41,7 @@ function App() {
               <Route path="/" element={<Layout><Home /></Layout>} />
               <Route path="/about" element={<Layout><About /></Layout>} />
               <Route path="/academic" element={<Layout><Academic /></Layout>} />
+              <Route path="/blog" element={<Layout><Blog /></Layout>} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
 

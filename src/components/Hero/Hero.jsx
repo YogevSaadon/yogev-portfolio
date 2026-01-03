@@ -18,7 +18,7 @@ const Hero = () => {
               Software Engineer | Systems & AI Projects
             </p>
             <p className={styles.description}>
-              I work on software systems with a focus on structure, performance, and reliability. My projects span real-time simulations, AI-driven tools, and backend infrastructure. I'm drawn to how systems behave under complexity—where they fail, where they hold—and how to build them to be consistent and predictable. Alongside my computer science studies, I explore system design, performance tuning, and applied AI through hands-on work.
+              I build software systems with an emphasis on performance and reliability. I've worked on real time simulations, AI powered tools, and backend infrastructure. I like digging into how systems behave under pressure, finding where they break, and making them predictable and easy to operate. I focus on system design, performance tuning, and applied AI through hands on projects.
             </p>
           </div>
           
@@ -51,6 +51,16 @@ const Hero = () => {
             <div className={styles.floatingElement1}></div>
             <div className={styles.floatingElement2}></div>
           </div>
+        </div>
+
+        <div className={styles.blogButtonWrapper}>
+          <button
+            className={styles.blogButton}
+            onClick={() => navigate('/blog')}
+            aria-label="Visit AI Blog"
+          >
+            AI Blog
+          </button>
         </div>
       </div>
       

@@ -22,11 +22,10 @@ const Skills = () => {
       ]
     },
     {
-      title: "Backend/DevOps",
+      title: "Backend",
       skills: [
         "FastAPI",
         "WebSockets",
-        "Docker",
         "SQLite",
         "Git",
         "GitHub"
@@ -38,12 +37,6 @@ const Skills = () => {
         "Real-time Systems",
         "Performance Optimization",
         "Math-based Algorithms"
-      ]
-    },
-    {
-      title: "AI Workflow",
-      skills: [
-        "Experience using AI-assisted development tools (Claude Code)"
       ]
     },
     {

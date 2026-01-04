@@ -157,24 +157,32 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  
+  transition: opacity 0.2s ease, transform 0.3s ease;
+
   /* Make image non-selectable/markable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
+
   /* Prevent dragging */
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
-  
+
   /* Additional protection */
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.imageHidden {
+  opacity: 0;
+}
+
+.imageVisible {
+  opacity: 1;
 }
 
 .imageWrapper:hover .profileImage {

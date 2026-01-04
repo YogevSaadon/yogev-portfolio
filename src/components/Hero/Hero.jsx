@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Hero.module.css';
 import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
   const navigate = useNavigate();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <section id="hero" className={styles.hero}>
@@ -39,9 +41,10 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt="Yogev Saadon - Software Engineer"
-                className={styles.profileImage}
+                className={`${styles.profileImage} ${imageLoaded ? styles.imageVisible : styles.imageHidden}`}
                 width="400"
                 height="400"
+                onLoad={() => setImageLoaded(true)}
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
                 draggable={false}

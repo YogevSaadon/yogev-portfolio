@@ -72,7 +72,7 @@ const Contact = () => {
 
         <div className={styles.footer}>
           <p className={styles.copyright}>
-            © 2025 Yogev Saddon. Built with Kombai and React.
+            © 2025 Yogev Saddon.
           </p>
         </div>
       </div>

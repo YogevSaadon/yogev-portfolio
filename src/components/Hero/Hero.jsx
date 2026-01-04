@@ -57,9 +57,9 @@ const Hero = () => {
           <button
             className={styles.blogButton}
             onClick={() => navigate('/blog')}
-            aria-label="Visit AI Blog"
+            aria-label="Visit Blog - About AI"
           >
-            AI Blog
+            Blog - About AI
           </button>
         </div>
       </div>

@@ -70,9 +70,9 @@ const Blog = () => {
   return (
     <>
       <SEOHead
-        title="AI Blog - Yogev Saadon"
+        title="About AI - Yogev Saadon"
         description="Thoughts on AI development, systems programming, game development, and software engineering."
-        keywords="AI Blog, Software Engineering, Game Development, Systems Programming, Tech Blog"
+        keywords="About AI, Software Engineering, Game Development, Systems Programming, Tech Blog"
       />
 
       <div className={styles.blogPage}>

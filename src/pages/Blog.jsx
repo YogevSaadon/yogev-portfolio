@@ -43,7 +43,7 @@ const Blog = () => {
         <h3>Important Terms</h3>
         <p><strong>Neural Network:</strong> A computing system inspired by biological brains, made of layers of connected nodes that process information. The foundation of Deep Learning.</p>
         <p><strong>Generative AI:</strong> AI that creates new data. LLMs, image generators, etc.</p>
-        <p><strong>NLP (Natural Language Processing):</strong> The field of AI dealing with language. Can be done with various architectures, today mostly Transformers.</p>
+        <p><strong>NLP (Natural Language Processing):</strong> The field of dealing with language. Can be done with various approaches with or without AI (regex, Google Translate). When people say NLP they usually mean Transformers.</p>
         <p><strong>Computer Vision:</strong> The field of AI dealing with images and video. This is not a type of AI, it's a field (like NLP). You can do Computer Vision with Symbolic AI or CNN (most common today).</p>
         <p><strong>Diffusion Models:</strong> A Deep Learning technique for generating images, video, and audio.</p>
 

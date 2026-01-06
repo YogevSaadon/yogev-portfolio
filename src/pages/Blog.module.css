@@ -128,7 +128,7 @@
 .articleBody {
   font-size: 1.25rem;
   line-height: 1.8;
-  color: var(--color-text-primary);
+  color: var(--text-secondary);
 }
 
 .articleBody p {
@@ -171,6 +171,28 @@
   border-radius: 8px;
   overflow-x: auto;
   margin-bottom: var(--spacing-lg);
+}
+
+.articleBody table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-xl) 0;
+}
+
+.articleBody th,
+.articleBody td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.articleBody th {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.articleBody tr:last-child td {
+  border-bottom: none;
 }
 
 .articleBody pre code {
@@ -219,6 +241,10 @@
 }
 
 [data-theme="dark"] .articleBody li::marker {
+  color: #40E0D0;
+}
+
+[data-theme="dark"] .articleBody th {
   color: #40E0D0;
 }
 

@@ -10,6 +10,70 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 2,
+      title: "AI Job Roles: Making Sense of the Mess",
+      date: "2025-01-04",
+      summary: "Breaking down the confusing landscape of AI job titles and what they actually mean.",
+      content: `
+        <p>Job titles in the AI industry are a mess. We have the same name for different jobs, and different names for jobs that are almost the same. I wanted to make some order for myself, and I'm sharing it here.</p>
+        <p>If anyone has corrections, I'd be happy to hear them.</p>
+
+        <h3>How I Think About AI: With Data vs Without Data</h3>
+        <p>I like to split AI into two different worlds:</p>
+        <p><strong>Without Data (Deterministic):</strong> Belongs to the programming world. If/else type thinking. Iterative development: write code, test, fix, repeat.</p>
+        <p><strong>With Data (Probabilistic):</strong> Belongs to the data world. Week of cleaning data, run experiment, get conclusions, clean again, repeat until something works.</p>
+        <p>This is a fundamental difference in how you work, not just what you know.</p>
+
+        <h3>First: Regular Tech Roles</h3>
+        <p>Before talking about new AI roles, let's define the regular roles they're related to:</p>
+        <p><strong>Software Developer:</strong> Writes code. Builds applications. If it works, it works. If it doesn't, you debug until it does.</p>
+        <p><strong>DevOps Engineer:</strong> Manages infrastructure, deployment, CI/CD pipelines. Makes sure the code runs in production.</p>
+        <p><strong>Data Scientist:</strong> Analyzes data, finds insights, makes predictions. Can use classical statistics or Machine Learning.</p>
+        <p><strong>Symbolic AI Engineer:</strong> Works on rule-based AI systems: game AI, behavior trees, FSMs, simulations. Mathematical but not ML. This is what I do for my games, and this role has been doing the "real" AI in defense companies, autonomous vehicles, medical devices, etc. These people are often called "Gameplay Programmers" or "Algorithm Developers".</p>
+        <p><strong>Note:</strong> Symbolic AI Engineer and Data Scientist have been doing AI related work long before the current AI hype. They dominated the field until recently.</p>
+
+        <h3>AI Roles With Data (The Data Science Side)</h3>
+        <p><strong>ML Engineer:</strong> The big AI role. When people say "AI Engineer" they often mean this, though technically "AI Engineer" today means something else (part of the mess). Trains, optimizes, and deploys machine learning models. Half data, half programming, with a touch of ops. Needs strong math and data intuition. Works with large amounts of data, tweaking both the data and how the code uses it. Need to know: Python (mostly), libraries specific to their sub-field like PyTorch or TensorFlow (this is the core), and data skills related to model training.</p>
+        <p><strong>NLP Engineer:</strong> ML Engineer specialized in language. Should probably be called "Transformers Engineer". Fine-tuning language models, working with large models.</p>
+        <p><strong>Computer Vision Engineer:</strong> ML Engineer specialized in images and video. CNNs, object detection, image processing.</p>
+        <p><strong>Data Scientist (ML-focused):</strong> When they use ML, they're essentially doing what ML Engineers do but often with more focus on insights than production systems.</p>
+
+        <h3>AI Roles Without Data (The Programming Side)</h3>
+        <p>These roles are closer to traditional programming. Less experimentation with datasets, more building systems.</p>
+        <p><strong>AI Engineer:</strong> Mainly a software developer. Builds applications using pre-trained models (LLMs). API integration, RAG pipelines, prompt engineering. It requires mostly software engineering skills. I would call this "LLM Integration Engineer". The current name is misleading because "AI" is so broad. Doesn't require deep understanding of how models work internally. Can also build agents, autonomous systems that plan, use tools, and take actions. Common tools: LangChain, LangGraph, vector databases.</p>
+        <p><strong>MLOps Engineer:</strong> DevOps for ML. Deployment, monitoring, versioning of models. From what I understand, it's similar to DevOps, but I'm not a DevOps person, so I might be wrong here. An ML Engineer needs to know MLOps at the same level a Software Developer needs to know DevOps.</p>
+        <p><strong>AI Infra Engineer:</strong> Bigger scope than MLOps. Infrastructure for AI systems: GPU clusters, HPC (High Performance Computing), model serving, scaling. Similar to DevOps/SRE but for AI workloads.</p>
+        <p><strong>AI Solutions Engineer:</strong> Works with clients to implement AI solutions. Needs to understand both the limitations of AI (especially LLMs) and the business needs, in order to connect them.</p>
+
+        <h3>AI Researcher</h3>
+        <p>From what I understand, AI Researchers know everything and do what they want, more or less. They're not in a specific category, they're inventing new AI systems or improving existing ones. More systemic work rather than experiments on a specific model. Depends on the company they're in. Usually the cutting edge.</p>
+        <p>The key distinction: Engineers output code and products. Researchers output papers and new architectures.</p>
+        <p>Might include security/adversarial research as a sub-category, but I don't know enough about that area to say more.</p>
+
+        <h3>RL Engineer / Researcher</h3>
+        <p>Rare. Specializes in Reinforcement Learning. Works with simulations. Heavy math. Mostly in robotics, games, and research.</p>
+
+        <h3>Summary Table</h3>
+        <table>
+          <thead>
+            <tr><th>Role</th><th>Programming</th><th>Math</th><th>Data</th></tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="4"><strong>AI With Data</strong></td></tr>
+            <tr><td>ML Engineer</td><td>High</td><td>High</td><td>High</td></tr>
+            <tr><td>NLP Engineer</td><td>High</td><td>High</td><td>High</td></tr>
+            <tr><td>Computer Vision Engineer</td><td>High</td><td>High</td><td>High</td></tr>
+            <tr><td>Data Scientist (ML-focused)</td><td>Medium</td><td>High</td><td>High</td></tr>
+            <tr><td colspan="4"><strong>AI Without Data</strong></td></tr>
+            <tr><td>AI Engineer</td><td>High</td><td>Low</td><td>Low</td></tr>
+            <tr><td>AI Infra Engineer</td><td>High</td><td>Low</td><td>Medium</td></tr>
+            <tr><td>AI Solutions Engineer</td><td>Medium</td><td>Low</td><td>Low</td></tr>
+            <tr><td>MLOps Engineer</td><td>High</td><td>Low</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+      `
+    },
+    {
       id: 1,
       title: "What is AI?",
       date: "2025-01-02",

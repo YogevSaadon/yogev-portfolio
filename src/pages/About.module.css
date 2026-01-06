@@ -43,7 +43,7 @@
 .openingText {
   font-size: 1.375rem;
   line-height: 1.8;
-  color: var(--color-text-primary);
+  color: var(--text-secondary);
   margin-bottom: var(--spacing-lg);
 }
 
@@ -157,7 +157,7 @@
 .hobbyText {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: var(--color-text-primary);
+  color: var(--text-secondary);
 }
 
 /* Dark mode styles */

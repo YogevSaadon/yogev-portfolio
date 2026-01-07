@@ -10,6 +10,80 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 3,
+      title: "AI Is Making Us Dumber (And We Don't Even Notice)",
+      date: "2025-01-06",
+      summary: "How AI tools might be weakening our cognitive abilities, and what we can do about it.",
+      content: `
+        <h3>The Fitness Analogy</h3>
+        <p>Humans used to run for days chasing prey. Now we struggle to walk 40 minutes to the grocery store.</p>
+        <p>We don't need to run anymore. We have cars. But we still go to the gym, because without physical exercise, we get sick. Our bodies weren't designed for sitting all day.</p>
+        <p>I think the same thing is happening to our brains with AI.</p>
+
+        <h3>The Problem</h3>
+        <p>AI is making our results better, but not us.</p>
+        <p>A truck driver moves more cargo than a porter ever could. But the porter is physically stronger.</p>
+        <p>We're becoming the truck drivers of thinking. Great output, weak muscles.</p>
+
+        <h3>Why I Think This Happens</h3>
+        <p>The brain hates hard work. Humans are efficiency machines, we avoid any effort we don't absolutely need to do.</p>
+        <p>Small things add up. You get a new washing machine. Instead of spending 30 seconds figuring out the buttons, you take a photo and ask ChatGPT. Skipped half a minute of thinking.</p>
+        <p>And here's the trap: for small problems, AI is almost always right. So why bother checking? Why think at all? Ship it.</p>
+        <p>Do this hundreds of times a day, and your brain stops expecting to work.</p>
+
+        <h3>A "Smart" Workaround That Isn't</h3>
+        <p>Here is a clever trick: "I'll use big context smart creative hallucinating Gemini for creativity, then have Claude that is skeptical and practical check it."</p>
+        <p>Congratulations: you've become a copy-paste machine. Your brain never engaged at all.</p>
+
+        <h3>The Epidemic of Stupidity</h3>
+        <p>People think: "Now I can rest. When I really need to think hard, I will."</p>
+        <p>This is like saying: "I can drive everywhere now. When I need to run a marathon, I'll just do it."</p>
+        <p>That's not how it works. You can't skip the easy problems and expect to solve the hard ones. Humans learn gradually. Without solving simple things, we never develop the ability to solve complex things.</p>
+
+        <h3>What To Do</h3>
+        <p>I think anyone who uses AI heavily needs dedicated time each day for thinking, writing, and acting without it.</p>
+        <p>Not for "brain health" as some abstract concept. For actual performance.</p>
+        <p>Humans are gradual creatures. In fields that demand real thinking, you cannot skip the easy work because that is how you build the intuition for the hard stuff.</p>
+        <p>Try living your whole life without sports, then apply to special forces. Good luck.</p>
+
+        <h3>But What If AI Replaces Us?</h3>
+        <p>Two scenarios:</p>
+        <p><strong>If AI becomes better than humans at absolutely everything:</strong> Then yes, maybe cognitive skills don't matter for work anymore. But brain health still matters. People who regularly challenge their brains develop Alzheimer's symptoms 5 years later than those who don't. You still need to face cognitive challenge.</p>
+        <p><strong>If AI replaces almost everything, but not quite:</strong> Then the small part that humans still do becomes incredibly important. If AI handles 99% of the work and humans handle 1%, that 1% better be perfect. Critical thinking doesn't become less important. It becomes more important.</p>
+
+        <h3>The Bottom Line</h3>
+        <p>We don't need to run to survive anymore. But if your job is special forces, you better keep running.</p>
+        <p>We won't need to think for most tasks anymore. But if your job requires actual thinking, you better keep thinking.</p>
+        <p>You might think: people won't stop thinking because of AI, they will just think of other things. The calculator and Google didn't make us stop. But AI touches everything. Research shows brain changes from much smaller things, like GPS use affecting brain structure.</p>
+
+        <h3>Research That Supports This</h3>
+        <p><strong>1. MIT Media Lab 2025:</strong> 83% of ChatGPT users showed weaker neural connectivity in EEG after 4 months of AI use.</p>
+        <p><strong>2. Harvard/BCG 2023 (758 consultants):</strong> AI improved output quality by 40%. But on tasks where AI made errors, AI users were 19% less likely to catch them than those working without AI.</p>
+        <p><strong>3. Gerlich 2025 (666 participants):</strong> Correlation between AI tool use and critical thinking abilities. Younger users (17-25) showed the highest AI dependence and lowest critical thinking scores.</p>
+        <p><strong>4. Google Effect (Sparrow 2011):</strong> When we know information is accessible, we remember less of it. We remember where to find it instead of what it is.</p>
+        <p><strong>5. GPS and the Hippocampus (Bohbot & Dahmani, McGill):</strong> GPS users showed spatial memory decline over 3 years. The opposite: London taxi drivers who memorized 26,000+ streets showed hippocampal growth visible on MRI.</p>
+        <p><strong>6. Calculator Effect (LaCour et al. 2019):</strong> Only 21% of university students noticed when calculators gave wrong answers by 15%. Even at 120% error, many didn't notice.</p>
+        <p><strong>7. Desirable Difficulties (Bjork):</strong> Students who took practice tests remembered 50% more than those who re-read the material. Interleaved practice: 63% success vs 20% for blocked practice. 80% of participants believed the less effective method worked better.</p>
+        <p><strong>8. Neurogenesis (Shors, Rutgers):</strong> The hippocampus produces ~10,000 new neurons daily. More than half die within weeks unless engaged by difficult learning. Easy tasks don't save them.</p>
+        <p><strong>9. Fan et al. 2024 (British Journal of Educational Technology):</strong> ChatGPT users had better essay scores but no difference in knowledge retention or transfer. They engaged less in self-reflection and monitoring.</p>
+        <p><strong>10. Illusion of Competence Study (Computers in Human Behavior):</strong> AI users believed they answered ~17/20 questions correctly. Actual score: ~13/20. AI creates false sense of mastery.</p>
+        <p><strong>11. Cognitive Reserve Research:</strong> People who regularly challenge their brains develop Alzheimer's symptoms 5 years later than those who don't.</p>
+
+        <h3>References</h3>
+        <p>1. Kosmyna, N. et al. (2025). MIT Media Lab study on ChatGPT and neural engagement.</p>
+        <p>2. Dell'Acqua, F. et al. (2023). Harvard/BCG study on AI and consultant performance.</p>
+        <p>3. Gerlich, M. (2025). "The Impact of AI on Critical Thinking." <em>Societies</em>.</p>
+        <p>4. Sparrow, B. et al. (2011). "Google Effects on Memory." <em>Science</em>.</p>
+        <p>5. Bohbot, V. & Dahmani, L. (McGill University). GPS navigation and hippocampal function.</p>
+        <p>6. LaCour et al. (2019). Calculator dependence and mathematical reasoning.</p>
+        <p>7. Bjork, R. "Desirable Difficulties" framework.</p>
+        <p>8. Shors, T. (Rutgers). Neurogenesis and effortful learning.</p>
+        <p>9. Fan et al. (2024). "Metacognitive laziness in AI-assisted learning." <em>British Journal of Educational Technology</em>.</p>
+        <p>10. "Illusion of Competence" study. <em>Computers in Human Behavior</em>.</p>
+        <p>11. Cognitive Reserve Research. <em>Nature Communications</em> (2024).</p>
+      `
+    },
+    {
       id: 2,
       title: "AI Job Roles: Making Sense of the Mess",
       date: "2025-01-04",
@@ -34,7 +108,8 @@ const Blog = () => {
 
         <h3>AI Roles With Data (The Data Science Side)</h3>
         <p><strong>ML Engineer:</strong> The big AI role. When people say "AI Engineer" they often mean this, though technically "AI Engineer" today means something else (part of the mess). Trains, optimizes, and deploys machine learning models. Half data, half programming, with a touch of ops. Needs strong math and data intuition. Works with large amounts of data, tweaking both the data and how the code uses it. Need to know: Python (mostly), libraries specific to their sub-field like PyTorch or TensorFlow (this is the core), and data skills related to model training.</p>
-        <p><strong>NLP Engineer:</strong> ML Engineer specialized in language. Should probably be called "Transformers Engineer". Fine-tuning language models, working with large models.</p>
+        <p><strong>DL Engineer:</strong> ML Engineer specializing in deep learning, works over neural networks with architectures like CNNs, RNNs, transformers.</p>
+        <p><strong>NLP Engineer:</strong> ML Engineer specialized in language. Transformers dominate the industry today. Working with language models.</p>
         <p><strong>Computer Vision Engineer:</strong> ML Engineer specialized in images and video. CNNs, object detection, image processing.</p>
         <p><strong>Data Scientist (ML-focused):</strong> When they use ML, they're essentially doing what ML Engineers do but often with more focus on insights than production systems.</p>
 

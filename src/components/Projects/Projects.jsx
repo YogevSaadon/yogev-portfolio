@@ -27,7 +27,7 @@ const Projects = () => {
     },
     {
       title: "Shadow AI",
-      description: "An experimental project exploring architectures for AI coding agents in multi-file codebases. Focused on reliability, context selection, and safer automated edits using local models.",
+      description: "An experimental project exploring architectures for AI coding agents in multi-file codebases. Focused on reliability, context selection, and safer automated edits using algorithmic ideas.",
       image: projectTwoImage,
       imageAlt: "Shadow AI - AI coding agent research project",
       technologies: ["Python", "Ollama (local LLMs)", "Claude Code", "Cursor", "AI coding agents", "Git", "GitHub"],

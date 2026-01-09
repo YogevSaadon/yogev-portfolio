@@ -10,6 +10,85 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 4,
+      title: "Is University Still Relevant in the Age of AI?",
+      date: "2025-01-08",
+      summary: "Why university might matter more now than ever, as a gym for the brain.",
+      content: `
+        <p>Should people go to university?</p>
+        <p>I used to be split on this. Before AI, I had arguments for both sides. Today, I'm more decisive. Let me explain.</p>
+
+        <h3>Before AI: The Case For and Against</h3>
+        <p>This isn't the main point of my post, but briefly:</p>
+        <p><strong>For:</strong></p>
+        <p>Knowledge and skills. A mechanical engineer learns physics. A computer scientist learns code. When they face problems in the future, they'll remember which tools to reach for.</p>
+        <p>Employers view university favorably. Proof of hard work and consistency.</p>
+        <p>Friends and connections. I still have close, successful friends from university, over a decade later. I still benefit from those relationships.</p>
+        <p><strong>Against:</strong></p>
+        <p>Time and money. In that time you could learn industry-relevant skills, work, save, invest, start a business. And it costs money.</p>
+        <p><strong>Neutral:</strong></p>
+        <p>Fun. Some people love it, some suffer. Depends on the person.</p>
+
+        <h3>The Obvious Reaction to AI</h3>
+        <p>The immediate thought should be: now there's even more against university.</p>
+        <p>All the knowledge is in AI. No need to learn it. AI agents can even act on it. While AI moves at light speed, university programs change slowly.</p>
+        <p>I see posts about university becoming obsolete. From multiple people.</p>
+        <p>But there's one advantage that isn't talked about enough. Until now, it was less important. Now it's much more important.</p>
+        <p>I argue that university makes a person smarter.</p>
+
+        <h3>How University Makes Us Smarter</h3>
+        <p><strong>1. Knowledge as a foundation for creativity</strong></p>
+        <p>It's hard to invent a new algorithm if you don't know what an algorithm is. Creativity comes from knowing the field.</p>
+        <p>Teresa Amabile's Componential Theory of Creativity (Harvard, 1983) identifies domain knowledge as one of the essential components for creative work. She calls it "the basic raw materials for any creative performance."</p>
+        <p>A 2023 study on mathematicians found that experts were more creative in their domain than novices, but not more creative in general. Domain-specific knowledge was the foundation.</p>
+        <p>If we want to create something AI has never seen, we need to understand the foundations ourselves. Only then can we have the breakthrough.</p>
+        <p><strong>2. Skills that transfer to similar domains</strong></p>
+        <p>Analytical thinking from STEM degrees. Structured thinking from writing papers. These transfer to related fields and problems.</p>
+        <p>Vasiliy Lomachenko, one of the greatest boxers of all time, was sent by his father to learn traditional Ukrainian Hopak dancing for 4 years. Dance and boxing share similar physical foundations: footwork, balance, rhythm.</p>
+        <p>Miyamoto Musashi said: "Once you find the way, you will see it in all things."</p>
+        <p>There are studies showing that writing about how we see our future has a direct relationship to success. That reading and writing affect brain structure.</p>
+        <p>University trains thinking.</p>
+
+        <h3>Why This Matters More Now</h3>
+        <p>In my previous post, I talked about how AI is making us dumber.</p>
+        <p>If AI is weakening our cognitive abilities, we need places to strengthen them. University is one of the last places left where we're forced to think without AI assistance.</p>
+        <p>Humans build skills gradually. Without solving simple things, we never develop the ability to solve complex ones.</p>
+        <p>When AI does most of the work, the direction you give it becomes more important. AI works hard. What matters now is having the knowledge to point it in the right direction.</p>
+
+        <h3>Should AI Be Adapted into University?</h3>
+        <p>Some people say university should adapt to AI. To get people ready for real life.</p>
+        <p>I think that's like saying gyms should adapt to cars. The opposite needs to happen. We need places without AI.</p>
+        <p>Using AI in university is like sending a robot to the gym for you.</p>
+        <p>Depends on how you see it. A place to develop thinking? Or a place to get you a job?</p>
+        <p>I always thought university should give you the tools to adapt. Analytical thinking, complex problem-solving. Technologies change.</p>
+        <p>I think AI should stay out. Like the internet stays out of exams.</p>
+        <p>University is one of the last places where we can prove and improve abilities without AI.</p>
+
+        <h3>The Bottom Line</h3>
+        <p>Of course, university isn't perfect. And it's not for everyone.</p>
+        <p>But it remains important as a gym for the brain.</p>
+        <p>And in my opinion, we need that now more than ever.</p>
+
+        <h3>Research That Supports This</h3>
+        <p><strong>1. Componential Theory of Creativity:</strong> Domain knowledge is essential for creative work. It's "the basic raw materials for any creative performance."</p>
+        <p><strong>2. Mathematical Expertise Study:</strong> Experts in mathematics were more creative in their domain than novices, but not more creative in general. Domain-specific knowledge was the foundation.</p>
+        <p><strong>3. Education and IQ:</strong> Each year of education raises IQ by 1-5 points. This is a causal effect, not just correlation.</p>
+        <p><strong>4. Future Authoring:</strong> Students who wrote about their goals had dropout rates cut in half. At McGill, grades improved 25% and dropout went from 30% to 0%.</p>
+        <p><strong>5. Literacy and Brain Structure:</strong> Learning to read creates new brain regions like the Visual Word Form Area that don't exist in illiterate adults. Reading physically reshapes the brain.</p>
+        <p><strong>6. Cognitive Reserve Research:</strong> People with more education develop Alzheimer's symptoms 5-7 years later than those with less education.</p>
+        <p><strong>7. Near Transfer:</strong> Skills transfer to similar domains is well-documented. Far transfer to unrelated domains shows minimal effects.</p>
+
+        <h3>References</h3>
+        <p>1. Amabile, T. M. (1983). "Componential Theory of Creativity." Harvard Business School.</p>
+        <p>2. Schindler, I. et al. (2023). "Mathematical expertise: the role of domain-specific knowledge." <em>Scientific Reports</em>.</p>
+        <p>3. Ritchie, S. J., & Tucker-Drob, E. M. (2018). "How Much Does Education Improve Intelligence?" <em>Psychological Science</em>.</p>
+        <p>4. Schippers, M. C. et al. (2015). Future Authoring and student outcomes. Erasmus University.</p>
+        <p>5. Dehaene, S. et al. (2015). "Illiterate to literate: behavioural and cerebral changes." <em>Nature Reviews Neuroscience</em>.</p>
+        <p>6. Stern, Y. (2012). "Cognitive reserve in ageing and Alzheimer's disease." <em>Lancet Neurology</em>.</p>
+        <p>7. Sala, G., & Gobet, F. (2019). "Cognitive Training Does Not Enhance General Cognition." <em>Trends in Cognitive Sciences</em>.</p>
+      `
+    },
+    {
       id: 3,
       title: "AI Is Making Us Dumber (And We Don't Even Notice)",
       date: "2025-01-06",
@@ -58,15 +137,15 @@ const Blog = () => {
 
         <h3>Research That Supports This</h3>
         <p><strong>1. MIT Media Lab 2025:</strong> 83% of ChatGPT users showed weaker neural connectivity in EEG after 4 months of AI use.</p>
-        <p><strong>2. Harvard/BCG 2023 (758 consultants):</strong> AI improved output quality by 40%. But on tasks where AI made errors, AI users were 19% less likely to catch them than those working without AI.</p>
-        <p><strong>3. Gerlich 2025 (666 participants):</strong> Correlation between AI tool use and critical thinking abilities. Younger users (17-25) showed the highest AI dependence and lowest critical thinking scores.</p>
-        <p><strong>4. Google Effect (Sparrow 2011):</strong> When we know information is accessible, we remember less of it. We remember where to find it instead of what it is.</p>
-        <p><strong>5. GPS and the Hippocampus (Bohbot & Dahmani, McGill):</strong> GPS users showed spatial memory decline over 3 years. The opposite: London taxi drivers who memorized 26,000+ streets showed hippocampal growth visible on MRI.</p>
-        <p><strong>6. Calculator Effect (LaCour et al. 2019):</strong> Only 21% of university students noticed when calculators gave wrong answers by 15%. Even at 120% error, many didn't notice.</p>
-        <p><strong>7. Desirable Difficulties (Bjork):</strong> Students who took practice tests remembered 50% more than those who re-read the material. Interleaved practice: 63% success vs 20% for blocked practice. 80% of participants believed the less effective method worked better.</p>
-        <p><strong>8. Neurogenesis (Shors, Rutgers):</strong> The hippocampus produces ~10,000 new neurons daily. More than half die within weeks unless engaged by difficult learning. Easy tasks don't save them.</p>
-        <p><strong>9. Fan et al. 2024 (British Journal of Educational Technology):</strong> ChatGPT users had better essay scores but no difference in knowledge retention or transfer. They engaged less in self-reflection and monitoring.</p>
-        <p><strong>10. Illusion of Competence Study (Computers in Human Behavior):</strong> AI users believed they answered ~17/20 questions correctly. Actual score: ~13/20. AI creates false sense of mastery.</p>
+        <p><strong>2. Harvard/BCG 2023:</strong> AI improved output quality by 40%. But on tasks where AI made errors, AI users were 19% less likely to catch them than those working without AI.</p>
+        <p><strong>3. Gerlich 2025:</strong> Correlation between AI tool use and critical thinking abilities. Younger users (17-25) showed the highest AI dependence and lowest critical thinking scores.</p>
+        <p><strong>4. Google Effect:</strong> When we know information is accessible, we remember less of it. We remember where to find it instead of what it is.</p>
+        <p><strong>5. GPS and the Hippocampus:</strong> GPS users showed spatial memory decline over 3 years. The opposite: London taxi drivers who memorized 26,000+ streets showed hippocampal growth visible on MRI.</p>
+        <p><strong>6. Calculator Effect:</strong> Only 21% of university students noticed when calculators gave wrong answers by 15%. Even at 120% error, many didn't notice.</p>
+        <p><strong>7. Desirable Difficulties:</strong> Students who took practice tests remembered 50% more than those who re-read the material. Interleaved practice: 63% success vs 20% for blocked practice. 80% of participants believed the less effective method worked better.</p>
+        <p><strong>8. Neurogenesis:</strong> The hippocampus produces ~10,000 new neurons daily. More than half die within weeks unless engaged by difficult learning. Easy tasks don't save them.</p>
+        <p><strong>9. Fan et al. 2024:</strong> ChatGPT users had better essay scores but no difference in knowledge retention or transfer. They engaged less in self-reflection and monitoring.</p>
+        <p><strong>10. Illusion of Competence Study:</strong> AI users believed they answered ~17/20 questions correctly. Actual score: ~13/20. AI creates false sense of mastery.</p>
         <p><strong>11. Cognitive Reserve Research:</strong> People who regularly challenge their brains develop Alzheimer's symptoms 5 years later than those who don't.</p>
 
         <h3>References</h3>
@@ -115,8 +194,8 @@ const Blog = () => {
 
         <h3>AI Roles Without Data (The Programming Side)</h3>
         <p>These roles are closer to traditional programming. Less experimentation with datasets, more building systems.</p>
-        <p><strong>AI Engineer:</strong> Mainly a software developer. Builds applications using pre-trained models (LLMs). API integration, RAG pipelines, prompt engineering. It requires mostly software engineering skills. I would call this "LLM Integration Engineer". The current name is misleading because "AI" is so broad. Doesn't require deep understanding of how models work internally. Can also build agents, autonomous systems that plan, use tools, and take actions. Common tools: LangChain, LangGraph, vector databases.</p>
-        <p><strong>MLOps Engineer:</strong> DevOps for ML. Deployment, monitoring, versioning of models. From what I understand, it's similar to DevOps, but I'm not a DevOps person, so I might be wrong here. An ML Engineer needs to know MLOps at the same level a Software Developer needs to know DevOps.</p>
+        <p><strong>AI Engineer:</strong> Mainly a software developer. Builds applications using pre-trained models (LLMs). API integration, RAG pipelines, prompt engineering. It requires mostly software engineering skills. I would call this "LLM Integration Engineer". The current name is misleading because "AI" is so broad. Doesn't require deep understanding of how models work internally. Can also build agents, autonomous systems that plan, use tools, and take actions. Common tools: LangChain, LangGraph, vector databases, RAG.</p>
+        <p><strong>MLOps Engineer:</strong> DevOps for ML. Deployment, monitoring, versioning of models. It's similar to DevOps, an ML Engineer needs to know MLOps at the same level a Software Developer needs to know DevOps.</p>
         <p><strong>AI Infra Engineer:</strong> Bigger scope than MLOps. Infrastructure for AI systems: GPU clusters, HPC (High Performance Computing), model serving, scaling. Similar to DevOps/SRE but for AI workloads.</p>
         <p><strong>AI Solutions Engineer:</strong> Works with clients to implement AI solutions. Needs to understand both the limitations of AI (especially LLMs) and the business needs, in order to connect them.</p>
 
@@ -167,7 +246,7 @@ const Blog = () => {
         <h3>The AI Hierarchy</h3>
         <p>Artificial Intelligence contains everything, any system that simulates intelligent behavior.</p>
         <p>Under it sits Machine Learning: systems that learn from data.</p>
-        <p>Under that sits Deep Learning: ML systems that use neural networks with many layers. LLMs like GPT are inside this category.</p>
+        <p>Under that sits Deep Learning: Machine Learning systems that use neural networks with many layers. Large Language Models like GPT are inside this category.</p>
 
         <h3>Types of Machine Learning</h3>
         <p><strong>Learning from Examples:</strong> Someone gives the system examples to learn from. It uses either labeled data (someone marks what's a cat, what's a dog) or unlabeled data (the system finds patterns on its own). Can learn almost anything if there's enough data, but can't function without it.</p>

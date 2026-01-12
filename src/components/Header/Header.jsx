@@ -81,9 +81,9 @@ const Header = () => {
   ];
 
   const pageLinks = [
+    { path: '/blog', label: 'About AI' },
     { path: '/about', label: 'About Me' },
-    { path: '/academic', label: 'Grades' },
-    { path: '/blog', label: 'About AI' }
+    { path: '/academic', label: 'Grades' }
   ];
 
   const getPageTitle = () => {

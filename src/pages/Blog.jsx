@@ -189,14 +189,14 @@ const Blog = () => {
         <p><strong>ML Engineer:</strong> The big AI role. When people say "AI Engineer" they often mean this, though technically "AI Engineer" today means something else (part of the mess). Trains, optimizes, and deploys machine learning models. Half data, half programming, with a touch of ops. Needs strong math and data intuition. Works with large amounts of data, tweaking both the data and how the code uses it. Need to know: Python (mostly), libraries specific to their sub-field like PyTorch or TensorFlow (this is the core), and data skills related to model training.</p>
         <p><strong>DL Engineer:</strong> ML Engineer specializing in deep learning, works over neural networks with architectures like CNNs, RNNs, transformers.</p>
         <p><strong>NLP Engineer:</strong> ML Engineer specialized in language. Transformers dominate the industry today. Working with language models.</p>
-        <p><strong>Computer Vision Engineer:</strong> ML Engineer specialized in images and video. CNNs, object detection, image processing.</p>
+        <p><strong>Computer Vision Engineer:</strong> ML Engineer specialized in images and video. Not long ago was mostly CNNs, but now mostly transformers (vision transformers). Object detection, image processing.</p>
         <p><strong>Data Scientist (ML-focused):</strong> When they use ML, they're essentially doing what ML Engineers do but often with more focus on insights than production systems.</p>
 
         <h3>AI Roles Without Data (The Programming Side)</h3>
         <p>These roles are closer to traditional programming. Less experimentation with datasets, more building systems.</p>
         <p><strong>AI Engineer:</strong> Mainly a software developer. Builds applications using pre-trained models (LLMs). API integration, RAG pipelines, prompt engineering. It requires mostly software engineering skills. I would call this "LLM Integration Engineer". The current name is misleading because "AI" is so broad. Doesn't require deep understanding of how models work internally. Can also build agents, autonomous systems that plan, use tools, and take actions. Common tools: LangChain, LangGraph, vector databases, RAG.</p>
-        <p><strong>MLOps Engineer:</strong> DevOps for ML. Deployment, monitoring, versioning of models. It's similar to DevOps, an ML Engineer needs to know MLOps at the same level a Software Developer needs to know DevOps.</p>
-        <p><strong>AI Infra Engineer:</strong> Bigger scope than MLOps. Infrastructure for AI systems: GPU clusters, HPC (High Performance Computing), model serving, scaling. Similar to DevOps/SRE but for AI workloads.</p>
+        <p><strong>MLOps Engineer:</strong> DevOps for ML. Focuses on monitoring and versioning models (like DevOps for code). An ML Engineer needs to know MLOps at the same level a Software Developer needs to know DevOps.</p>
+        <p><strong>AI Infra Engineer:</strong> Bigger scope than MLOps. Focuses on hardware/scale issues like splitting compute power and handling GPU failures during massive cloud training sessions. Infrastructure for AI systems: GPU clusters, HPC (High Performance Computing), model serving, scaling.</p>
         <p><strong>AI Solutions Engineer:</strong> Works with clients to implement AI solutions. Needs to understand both the limitations of AI (especially LLMs) and the business needs, in order to connect them.</p>
 
         <h3>AI Researcher</h3>

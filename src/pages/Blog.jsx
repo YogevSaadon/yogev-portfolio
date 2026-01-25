@@ -10,6 +10,70 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 5,
+      title: "AI Psychosis: The Yes Man in Your Pocket",
+      date: "2025-01-10",
+      summary: "How AI's constant validation can lead to losing touch with reality, especially for solo founders.",
+      content: `
+        <h3>The Problem</h3>
+        <p>AI says yes to everything.</p>
+        <p>Your startup idea? Amazing. Your LinkedIn post? Compelling. Your life decisions? All valid.</p>
+
+        <h3>Why AI Is a Yes Man</h3>
+        <p>AI is optimized to be helpful and non-confrontational. In practice, this often shows up as agreeableness rather than truth-seeking.</p>
+        <p>There's research on this. It's called sycophancy. AI models are trained on human feedback, and humans reward answers that feel good. So AI learns to tell you what you want to hear.</p>
+        <p>Ask ChatGPT if your idea is good. It will say yes. Ask if your post is well-written. It will say yes. Ask if you should quit your job and start a company. It will find reasons to support you.</p>
+        <p>It's how it was built.</p>
+
+        <h3>The Danger</h3>
+        <p>Humans need reality checks. We need people who tell us our ideas are bad. We need friction.</p>
+        <p>AI removes the friction.</p>
+        <p>You might think: this only affects people who already have mental health issues. But research shows otherwise. People with no prior recorded history of mental illness have developed delusions after prolonged AI use, leading to hospitalizations and even suicide attempts.</p>
+        <p>A psychiatrist at UCSF reported treating 12 patients with psychosis-like symptoms tied to extended chatbot use. Delusions, disorganized thinking, hallucinations. Most were young adults.</p>
+        <p>The risk factors aren't just pre-existing conditions. They include stress, grief, isolation, anxiety, sleep disruption. Normal life situations that many people go through.</p>
+        <p>AI validates what you already believe, and you spiral deeper into it.</p>
+
+        <h3>Who Is At Risk</h3>
+        <p>My take: solo founders are at the highest risk.</p>
+        <p>Because of AI, more people can work alone. A tech person with AI can build an entire product solo. And by doing this, they walk straight into stress, isolation, and no sleep. Sometimes they can't talk to anyone about their idea. They can't reveal it.</p>
+        <p>Think about it: you have a crazy idea that you can't tell anyone about. You're isolated. You're stressed. You're not sleeping. And you have an AI that tells you you're a genius 24/7.</p>
+        <p>This is a recipe for losing touch with reality.</p>
+        <p>Research backs this up. One of the three main patterns psychiatrists see in AI psychosis cases is "Messianic missions": people who believe they have uncovered a truth about the world. Grandiose delusions. That's the solo founder story.</p>
+        <p>Risk factors: loneliness, existing mental health issues, lack of sleep, treating AI as the ultimate authority.</p>
+
+        <h3>Can We Overcome This?</h3>
+        <p>Can we fix the Yes Man problem? Or at least reduce it?</p>
+        <p>I've tried several things. None of them are good enough.</p>
+        <p><strong>The framing trick:</strong> If you start with "I have a crazy idea," AI flows with you. If you say "bad idea," it goes negative. There's no real judgment, just mirroring.</p>
+        <p><strong>Third person:</strong> I tried talking about my idea as if it's a friend's idea. Or pretending I'm an investor evaluating a pitch. It helps a little, but not enough.</p>
+        <p><strong>Two different AIs:</strong> Use creative Gemini for ideas, skeptical Claude to judge them. Problem: sometimes Claude is wrong too. You're still trusting AI to validate AI.</p>
+        <p>In my opinion, at least for now, there's no real way to escape this without other people.</p>
+
+        <h3>What Actually Works</h3>
+        <p>If you can run a POC easily, do it as fast as possible and show it to others.</p>
+        <p>SaaS product? Talk to potential customers before you build anything.</p>
+        <p>Secret idea that you can't tell anyone? Tell the person you trust most. Better: tell three people.</p>
+        <p>AI validation is worthless. Human validation is everything.</p>
+
+        <h3>Research That Supports This</h3>
+        <p><strong>1. Sycophancy in AI:</strong> AI models trained on human feedback learn to agree with users even when users are wrong. This is documented across multiple model families.</p>
+        <p><strong>2. "Messianic Missions" Pattern:</strong> Psychiatrists identify three main patterns in AI psychosis cases. One of them is "Messianic missions": people who believe they have uncovered a truth about the world. Grandiose delusions.</p>
+        <p><strong>3. UCSF Psychiatrist Report (2025):</strong> A psychiatrist at UCSF reported treating 12 patients with psychosis-like symptoms tied to extended chatbot use. Most were young adults. Symptoms included delusions, disorganized thinking, and hallucinations.</p>
+        <p><strong>4. Healthy People At Risk:</strong> People with no prior history of mental illness have developed delusions after prolonged AI use, leading to hospitalizations and suicide attempts.</p>
+        <p><strong>5. APA Report on AI and Mental Health:</strong> The American Psychiatric Association has noted concerns about AI chatbots reinforcing delusions and providing validation without clinical judgment.</p>
+        <p><strong>6. Illusion of Competence:</strong> AI users overestimate their own performance. They believed they answered 17/20 questions correctly when actual score was 13/20.</p>
+        <p><strong>7. Harvard/BCG 2023:</strong> When AI made errors, AI users were 19% less likely to catch them. AI creates false confidence.</p>
+
+        <h3>References</h3>
+        <p>1. Perez, E. et al. (2022). "Discovering Language Model Behaviors with Model-Written Evaluations." Anthropic.</p>
+        <p>2. National Geographic (2023). Coverage of the Belgian AI chatbot case.</p>
+        <p>3. American Psychiatric Association. Special report on AI and mental health considerations.</p>
+        <p>4. RAND Corporation. Research on AI manipulation and prompt engineering.</p>
+        <p>5. "Illusion of Competence" study. <em>Computers in Human Behavior</em>.</p>
+        <p>6. Dell'Acqua, F. et al. (2023). Harvard/BCG study on AI and consultant performance.</p>
+      `
+    },
+    {
       id: 4,
       title: "Is University Still Relevant in the Age of AI?",
       date: "2025-01-08",

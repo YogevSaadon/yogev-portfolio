@@ -12,7 +12,7 @@ const Blog = () => {
     {
       id: 5,
       title: "AI Psychosis: The Yes Man in Your Pocket",
-      date: "2025-01-10",
+      date: "2025-01-25",
       summary: "How AI's constant validation can lead to losing touch with reality, especially for solo founders.",
       content: `
         <h3>The Problem</h3>

@@ -10,6 +10,31 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 6,
+      title: "When AI Searches the Web, It Finds Itself",
+      date: "2025-01-26",
+      summary: "What happens when AI grounds itself on content written by other AIs?",
+      content: `
+        <p>I asked an AI that was hallucinating to do something: go search the web, bring sources, do some grounding.</p>
+        <p>What if what it finds... was written by another AI?</p>
+        <p>I'm not grounding it to reality. I'm putting it into an echo loop of itself.</p>
+
+        <h3>The Grounding Paradox</h3>
+        <p>This is exactly what RAG (Retrieval) does. The model doesn't "know" more, so it pulls text from the web. But if the web is full of synthetic content, it finds other AI content. A lie that one model invented gets published, indexed, and "verified" by other models as fact.</p>
+        <p>AI eating its own tail.</p>
+
+        <h3>This Isn't Just an AI Problem</h3>
+        <p>A person without AI can read something online, think it was written by an expert, a researcher, a journalist... when in reality it's AI text that looks credible. No human criticism, no accountability.</p>
+
+        <h3>Even "Human Content" Isn't Always Human Anymore</h3>
+        <p>People write with AI. Sometimes the human just pressed Enter.</p>
+        <p>If I consulted with AI before or after writing this post, it's already a bit contaminated.</p>
+
+        <h3>Is There Anything We Can Do?</h3>
+        <p>I honestly think we need a human only Wikipedia or data source. But I don't know how that would even be built, because every human is already using AI.</p>
+      `
+    },
+    {
       id: 5,
       title: "AI Psychosis: The Yes Man in Your Pocket",
       date: "2025-01-25",

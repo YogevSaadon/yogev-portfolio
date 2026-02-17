@@ -1,8 +1,8 @@
 
 const SEOHead = ({
   title = 'Yogev - Software Engineer Portfolio',
-  description = 'Professional portfolio of Yogev, a software engineer specializing in AI & Machine Learning, LLMs, RAG systems, Python development, and game development with Godot Engine.',
-  keywords = 'Yogev, Software Engineer, AI Developer, Machine Learning, LLMs, RAG, Python, GDScript, Godot Engine, Game Development, Portfolio',
+  description = 'Professional portfolio of Yogev, a software engineer specializing in machine learning, deep learning, AI agents, Python, Rust, and game development.',
+  keywords = 'Yogev, Software Engineer, Machine Learning, Deep Learning, NLP, AI Agents, PyTorch, HuggingFace, Python, Rust, GDScript, Godot Engine, Portfolio',
   image = '/logo.png',
   url = '',
   type = 'website',
@@ -39,11 +39,13 @@ const SEOHead = ({
         name: "Independent"
       },
       knowsAbout: [
-        'Artificial Intelligence',
         'Machine Learning',
-        'Large Language Models',
-        'RAG Systems',
+        'Deep Learning',
+        'NLP',
+        'AI Agents',
         'Python',
+        'PyTorch',
+        'Rust',
         'GDScript',
         'Game Development',
         'Godot Engine',

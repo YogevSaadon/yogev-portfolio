@@ -5,6 +5,7 @@ import projectOneImage from '../../assets/projects/ProjectOne.jpg';
 import projectTwoImage from '../../assets/projects/ProjectTwo.webp';
 import projectThreeImage from '../../assets/projects/ProjectThree.webp';
 import projectFourImage from '../../assets/projects/ProjectFour.webp';
+import projectFiveImage from '../../assets/projects/ProjectFive.webp';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -26,9 +27,21 @@ const Projects = () => {
       ]
     },
     {
+      title: "Project M",
+      description: "Creating a research based new architecture for NLP AI models.",
+      image: projectTwoImage,
+      imageAlt: "Project M - NLP AI research project",
+      technologies: ["AI Research", "NLP", "ML Architecture", "Deep Learning", "Fine-tuning (QLoRA)", "HuggingFace (Transformers, PEFT)"],
+      learnings: [
+        "Researched novel NLP model architectures",
+        "Fine-tuned language models with QLoRA",
+        "Developed rigorous test methodology for AI models"
+      ]
+    },
+    {
       title: "Shadow AI",
       description: "An experimental project exploring architectures for AI coding agents in multi-file codebases. Focused on reliability, context selection, and safer automated edits using algorithmic ideas.",
-      image: projectTwoImage,
+      image: projectThreeImage,
       imageAlt: "Shadow AI - AI coding agent research project",
       technologies: ["Python", "Ollama (local LLMs)", "Claude Code", "Cursor", "AI coding agents", "Git", "GitHub"],
       githubUrl: "https://github.com/YogevSaadon/Shadow-Public-R-D/blob/main/Theory.md",
@@ -41,29 +54,26 @@ const Projects = () => {
       ]
     },
     {
-      title: "Qude",
-      description: "A real-time queue system enabling instant QR-code onboarding. Provides live position updates directly to mobile browsers; no app required. Built on modern architecture optimized for a seamless user experience.",
-      image: projectThreeImage,
-      imageAlt: "Qude queue management system interface",
-      technologies: ["Python", "Docker", "Flask", "SQL", "REST API", "Full Stack", "React"],
-      githubUrl: "https://github.com/YogevSaadon/Qode",
-      demoUrl: "https://github.com/YogevSaadon/Qode",
+      title: "Vir RPG",
+      description: "Text based RPG with fast paced combat made in Rust.",
+      image: projectFourImage,
+      imageAlt: "Vir RPG - text based RPG game",
+      technologies: ["Rust", "Macroquad", "Cross-Platform", "State Machine"],
       learnings: [
-        "Built real-time queue management with live updates",
-        "Implemented QR code scanning for instant onboarding",
-        "Designed Full Stack architecture for seamless UX"
+        "Built a text-based RPG with fast-paced combat",
+        "Implemented state machine architecture in Rust",
+        "Developed cross-platform game with Macroquad"
       ]
     },
     {
-      title: "Portfolio Website",
-      description: "This portfolio, built with AI tools and GitHub Actions for automated deployment. Features modern React development.",
-      image: projectFourImage,
-      imageAlt: "Yogev Saadon portfolio website logo",
-      technologies: ["Generative AI", "React", "Node.js", "GitHub Actions", "CI/CD"],
-      githubUrl: "https://github.com/YogevSaadon/yogev-portfolio",
-      demoUrl: "https://yogevsaadon.github.io/yogev-portfolio/",
+      title: "Full Stack Projects",
+      description: "Various full stack projects, apps and websites.",
+      image: projectFiveImage,
+      imageAlt: "Full stack projects logo",
+      technologies: ["Python", "Docker", "Flask", "SQL", "REST API", "React", "Node.js", "GitHub Actions", "CI/CD"],
+      githubUrl: "https://github.com/YogevSaadon/Qode",
       learnings: [
-        "Leveraged AI tools for rapid development",
+        "Built real-time queue management with live updates",
         "Implemented automated deployment with GitHub Actions",
         "Built responsive design with modern React patterns"
       ]
@@ -126,26 +136,30 @@ const Projects = () => {
                 />
                 <div className={styles.imageOverlay}>
                   <div className={styles.projectLinks}>
-                    <a
-                      href={projects[currentProject].githubUrl}
-                      className={styles.projectLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View GitHub repository"
-                    >
-                      <Share2 size={20} />
-                      <span>{projects[currentProject].linkLabels?.code || "Code"}</span>
-                    </a>
-                    <a
-                      href={projects[currentProject].demoUrl}
-                      className={styles.projectLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View live demo"
-                    >
-                      <ExternalLink size={20} />
-                      <span>{projects[currentProject].linkLabels?.demo || "Demo"}</span>
-                    </a>
+                    {projects[currentProject].githubUrl && (
+                      <a
+                        href={projects[currentProject].githubUrl}
+                        className={styles.projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View GitHub repository"
+                      >
+                        <Share2 size={20} />
+                        <span>{projects[currentProject].linkLabels?.code || "Code"}</span>
+                      </a>
+                    )}
+                    {projects[currentProject].demoUrl && (
+                      <a
+                        href={projects[currentProject].demoUrl}
+                        className={styles.projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View live demo"
+                      >
+                        <ExternalLink size={20} />
+                        <span>{projects[currentProject].linkLabels?.demo || "Demo"}</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

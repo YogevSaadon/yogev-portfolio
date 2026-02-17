@@ -5,6 +5,7 @@ import projectOneImage from '../assets/projects/ProjectOne.jpg';
 import projectTwoImage from '../assets/projects/ProjectTwo.webp';
 import projectThreeImage from '../assets/projects/ProjectThree.webp';
 import projectFourImage from '../assets/projects/ProjectFour.webp';
+import projectFiveImage from '../assets/projects/ProjectFive.webp';
 
 // About page images
 import chessImage from '../assets/about/Chess_Image.webp';
@@ -17,6 +18,7 @@ const projectImages = [
   projectTwoImage,
   projectThreeImage,
   projectFourImage,
+  projectFiveImage,
 ];
 
 const aboutImages = [

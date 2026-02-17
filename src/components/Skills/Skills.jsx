@@ -6,27 +6,28 @@ const Skills = () => {
       title: "Languages",
       skills: [
         "Python",
-        "JavaScript (React)",
-        "SQL",
+        "GDScript",
+        "Rust",
         "Java",
-        "GDScript"
+        "JavaScript (React)"
       ]
     },
     {
-      title: "AI & Agents",
+      title: "Machine Learning",
+      skills: [
+        "Deep Learning",
+        "Neural Networks",
+        "NLP",
+        "HuggingFace",
+        "PyTorch"
+      ]
+    },
+    {
+      title: "AI Agents",
       skills: [
         "LLM Integration (Ollama, Claude)",
         "Agent Architecture",
-        "Prompt Engineering",
-        "Fine-tuning (SFT / PEFT / QLoRA)"
-      ]
-    },
-    {
-      title: "Backend",
-      skills: [
-        "FastAPI",
-        "WebSockets",
-        "SQLite"
+        "Prompt Engineering"
       ]
     },
     {
@@ -43,7 +44,8 @@ const Skills = () => {
       skills: [
         "Real-time Systems",
         "Performance Optimization",
-        "Godot (GDExtension)"
+        "Godot (GDExtension)",
+        "Macroquad (Rust)"
       ]
     },
     {

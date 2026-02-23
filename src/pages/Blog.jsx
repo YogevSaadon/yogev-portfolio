@@ -10,6 +10,23 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 7,
+      title: "What is Reinforcement Learning (RL) in Language Models?",
+      date: "2025-02-18",
+      summary: "How reinforcement learning uses consequences and fine-tuning to amplify a language model's strengths.",
+      content: `
+        <p>First, let's define two concepts.</p>
+        <p>Reinforcement Learning is basically creating an AI system using consequences. When it succeeds at a task, you give it a reward. When it fails, a punishment. This is exactly how they built the AI that plays chess so well.</p>
+        <p>The second concept is Fine-tuning.</p>
+        <p>You take a model and change its parameters just a bit, sharpening it in a desired direction using data. It isn't like training from scratch. It is more of a tweak. It is limited in scope but fast, cheap, and has a huge impact. Usually, this is done to focus the model on a specific field.</p>
+        <p>So, here is how Reinforcement Learning works in a Language Model:</p>
+        <p>You give the model a question that it struggles with. If it gets it right, you do a tiny bit of fine-tuning in that direction. You are essentially explaining to it that this is the correct way of thinking.</p>
+        <p>Think about it like this. You are fine-tuning the model with data specifically adapted to it. Data that we obtained using the model itself. Every iteration improves it.</p>
+        <p>After a first round of correct answers, you can run a second round. This time, you give it a reward if it solves the problem more efficiently and faster.</p>
+        <p>In this way, you amplify the model's strengths and hide its weaknesses.</p>
+      `
+    },
+    {
       id: 6,
       title: "When AI Searches the Web, It Finds Itself",
       date: "2025-01-26",

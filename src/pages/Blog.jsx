@@ -10,6 +10,27 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 8,
+      title: "They Put a Fly's Brain in a Virtual World",
+      date: "2025-03-21",
+      summary: "A full neural network of a fly was mapped and placed into a simulation. What does it mean?",
+      content: `
+        <p>Not long ago, a fly's neural network was uploaded into a virtual environment. How did it happen, and what does it mean?</p>
+
+        <h3>How It Was Done</h3>
+        <p>An international group of scientists spent years physically and digitally mapping a fly's entire brain. 140,000 neurons. 50 million connections between them.</p>
+        <p>They loaded that mapping into a computer model and built a digital neural network on top of it, one closer to biology than standard deep learning. It's called a Spiking Neural Network (SNN), where information travels through electrical pulses, not continuous values.</p>
+        <p>Then they built a simulated environment and connected the full brain architecture to a virtual fly.</p>
+
+        <h3>So Can We Clone Humans Into a Simulation Now?</h3>
+        <p>No. A human brain has 86 billion neurons. Just storing that data is monstrous, let alone extracting it from a living brain. And there are chemicals involved in how brains work that were cut out of this system entirely.</p>
+        <p>On top of that, this brain doesn't change. It's static. You can apply mathematical modifications with data, but it doesn't grow new connections the way a biological brain does.</p>
+
+        <h3>What's Next</h3>
+        <p>The next announced step will probably be a mouse brain. There will be a lot to learn from these experiments, and this discovery might bring in more funding and researchers. But there's still a long way to go.</p>
+      `
+    },
+    {
       id: 7,
       title: "What is Reinforcement Learning (RL) in Language Models?",
       date: "2025-02-18",

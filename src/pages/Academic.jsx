@@ -13,7 +13,7 @@ const Academic = () => {
     startYear: 2021,
     expectedGraduation: 2026,
     totalCredits: 108,
-    completedCredits: 55,
+    completedCredits: 60,
     currentGPA: 81,
     recognizedCredits: 24,
     courses: [
@@ -22,6 +22,7 @@ const Academic = () => {
       { name: "Introduction to Computer Science and Java", grade: 85 },
       { name: "Probability for Computer Science", grade: 80 },
       { name: "Algorithms", grade: 77 },
+      { name: "Linear Algebra 2", grade: 72 },
       { name: "Introduction to Computer Networks", grade: 70 },
     ]
   };

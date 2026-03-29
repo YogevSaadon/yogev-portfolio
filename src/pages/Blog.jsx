@@ -10,6 +10,27 @@ const Blog = () => {
   // Blog posts data - add new posts here
   const blogPosts = [
     {
+      id: 9,
+      title: "Training From Scratch vs Fine-Tuning: The Engineering Difference",
+      date: "2025-03-29",
+      summary: "What actually changes under the hood when you fine-tune a language model versus training one from zero.",
+      content: `
+        <h3>Quick Recap of Both</h3>
+        <p>Training a model from scratch means taking a clean neural network and feeding it data. It takes a massive amount of time. The goal is for the model to learn what tokens mean and how they relate to each other. By the end, you get a model that can complete sentences.</p>
+        <p>Fine-tuning means taking a pre-trained model, feeding it new data, and adjusting it with that data. Usually, the goal is to focus the model on a specific task, pulling a personality out of what it already knows rather than teaching it general knowledge.</p>
+        <p>The same fine-tuning process on different models will produce different results.</p>
+        <p>If you take a model and try to teach it a medical domain full of complex words it never saw during pre-training, fine-tuning will give you poor results. The tokenizer doesn't change to fit the new data. Important new words won't be captured efficiently.</p>
+
+        <h3>What's Actually Different in the Engineering</h3>
+        <p>In practice, the engineering is quite similar. To fine-tune, you take a model and train it on data.</p>
+        <p>So what's different?</p>
+        <p>Data that comes at the end of training has more influence on the model.</p>
+        <p>To avoid breaking previously learned connections, the learning rate is set much lower.</p>
+        <p>You need far less data to get a behavior change than you would to train from scratch. The data is highly organized, so less data, faster, cheaper.</p>
+        <p>In cases where you want a question-answer format, besides restructuring the data, you compute loss only on the answer tokens. The instruction tokens don't contribute to the loss.</p>
+      `
+    },
+    {
       id: 8,
       title: "They Put a Fly's Brain in a Virtual World",
       date: "2025-03-21",

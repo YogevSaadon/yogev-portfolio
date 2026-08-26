@@ -17,10 +17,10 @@ const Hero = () => {
               <span className={styles.name}>Yogev Saadon</span>
             </h1>
             <p className={styles.subtitle}>
-              Software Engineer | ML
+              Software Engineer | Deep Learning
             </p>
             <p className={styles.description}>
-              I build software systems with an emphasis on performance and reliability. I work on real time simulations, deep learning systems, AI powered tools, and backend infrastructure. I like digging into how systems behave under pressure, finding where they break, and making them predictable and easy to operate. I focus on system design, performance tuning, and AI through hands on projects.
+              I build software systems with an emphasis on performance and reliability. I work on deep learning systems, real time simulations, AI powered tools, and backend infrastructure. I like digging into how systems behave under pressure, finding where they break, and making them predictable and easy to operate. I focus on deep learning, system design, and performance tuning through hands on projects.
             </p>
           </div>
           

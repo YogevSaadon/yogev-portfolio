@@ -9,8 +9,8 @@ const Contact = () => {
           <div className={styles.info}>
             <h2 className={styles.title}>Get In Touch</h2>
             <p className={styles.description}>
-              I'm always open to discussing new opportunities, interesting projects, 
-              or just having a chat about technology and development.
+              I'm always happy to talk about deep learning, research ideas,
+              and interesting technical problems.
             </p>
             
             <div className={styles.contactDetails}>
@@ -72,7 +72,7 @@ const Contact = () => {
 
         <div className={styles.footer}>
           <p className={styles.copyright}>
-            © 2025 Yogev Saddon.
+            © 2026 Yogev Saadon.
           </p>
         </div>
       </div>

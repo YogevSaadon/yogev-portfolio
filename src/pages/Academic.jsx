@@ -11,7 +11,6 @@ const Academic = () => {
     degree: "Bachelor of Science in Computer Science",
     institution: "The Open University of Israel",
     startYear: 2021,
-    expectedGraduation: 2026,
     totalCredits: 108,
     completedCredits: 60,
     currentGPA: 81,

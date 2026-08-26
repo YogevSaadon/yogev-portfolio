@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="footer__section">
             <h3 className="footer__title">Let's Connect</h3>
             <p className="footer__description">
-              Always interested in new opportunities and collaborations.
+              Always happy to talk about AI research and interesting projects.
             </p>
           </div>
           
